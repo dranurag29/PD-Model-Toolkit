@@ -74,6 +74,34 @@ dvc metrics diff
 streamlit run app/Home.py
 ```
 
+## DVC remote (data/artifact storage)
+
+`data/raw/*.parquet` and every stage's `artifacts/*/*.parquet` are DVC-
+tracked but git-ignored (see each directory's auto-generated `.gitignore`)
+-- git carries the code and the small `metrics.json` diagnostics, DVC
+carries the actual data. `dvc push`/`dvc pull` move that data to/from a
+remote.
+
+This machine's remote is configured in `.dvc/config.local` (a local path
+inside a Google Drive folder, so it gets off-machine backup via Drive's own
+sync, at zero cost and with no cloud credentials to manage). That file is
+deliberately **not committed** -- DVC's own `.dvc/.gitignore` excludes
+`config.local` by convention, since a remote is normally machine- or
+person-specific, and this one is a local path that only resolves on this
+Mac. Cloning this repo elsewhere gets the code but not the data; running
+`dvc repro` from scratch regenerates everything from the synthetic-data
+bootstrap stage, or you can point your own `dvc remote add --local` at
+wherever you want to store/share data from that machine.
+
+```bash
+# check this machine's configured remote
+dvc remote list --local
+
+# push/pull the actual data
+dvc push
+dvc pull
+```
+
 ## Extending the pipeline
 
 Every stage follows the same pattern (see `pipeline/stages/s01_univariate_gini.py`

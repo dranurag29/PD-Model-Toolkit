@@ -1,0 +1,223 @@
+stages:
+  generate_synthetic_data:
+    # Bootstrap only, so the pipeline is runnable before real bank data is
+    # wired up. Once real development_base/validation_base exports exist,
+    # replace this stage with `dvc add data/raw/*.parquet` and drop it here.
+    cmd: python scripts/make_synthetic_data.py
+    deps:
+      - scripts/make_synthetic_data.py
+      - pipeline/common/io.py
+    outs:
+      - data/raw/development_base.parquet
+      - data/raw/validation_base.parquet
+
+  univariate_gini:
+    cmd: python pipeline/stages/s01_univariate_gini.py
+    deps:
+      - pipeline/stages/s01_univariate_gini.py
+      - pipeline/common/metrics.py
+      - pipeline/common/io.py
+      - data/raw/development_base.parquet
+      - data/raw/validation_base.parquet
+      - decisions/univariate_review.yaml
+    params:
+      - global
+      - univariate
+    outs:
+      - artifacts/01_univariate/development.parquet
+      - artifacts/01_univariate/validation.parquet
+    metrics:
+      - artifacts/01_univariate/metrics.json:
+          cache: false
+
+  missing_value_treatment:
+    cmd: python pipeline/stages/s02_missing_value.py
+    deps:
+      - pipeline/stages/s02_missing_value.py
+      - pipeline/common/stats.py
+      - pipeline/common/io.py
+      - artifacts/01_univariate/development.parquet
+      - artifacts/01_univariate/validation.parquet
+      - decisions/missing_value_rules.yaml
+    params:
+      - global
+      - missing_value
+    outs:
+      - artifacts/02_missing/development.parquet
+      - artifacts/02_missing/validation.parquet
+    metrics:
+      - artifacts/02_missing/metrics.json:
+          cache: false
+
+  outlier_treatment:
+    cmd: python pipeline/stages/s03_outlier_treatment.py
+    deps:
+      - pipeline/stages/s03_outlier_treatment.py
+      - pipeline/common/stats.py
+      - pipeline/common/io.py
+      - artifacts/02_missing/development.parquet
+      - artifacts/02_missing/validation.parquet
+      - decisions/outlier_rules.yaml
+    params:
+      - global
+      - outlier
+    outs:
+      - artifacts/03_outlier/development.parquet
+      - artifacts/03_outlier/validation.parquet
+    metrics:
+      - artifacts/03_outlier/metrics.json:
+          cache: false
+
+  char_recoding:
+    cmd: python pipeline/stages/s04_char_recoding.py
+    deps:
+      - pipeline/stages/s04_char_recoding.py
+      - pipeline/common/io.py
+      - artifacts/03_outlier/development.parquet
+      - artifacts/03_outlier/validation.parquet
+      - decisions/char_recoding_rules.yaml
+    params:
+      - global
+      - char_recoding
+    outs:
+      - artifacts/04_char_recoding/development.parquet
+      - artifacts/04_char_recoding/validation.parquet
+    metrics:
+      - artifacts/04_char_recoding/metrics.json:
+          cache: false
+
+  transformations:
+    cmd: python pipeline/stages/s05_transformations.py
+    deps:
+      - pipeline/stages/s05_transformations.py
+      - pipeline/common/curves.py
+      - pipeline/common/stats.py
+      - pipeline/common/io.py
+      - artifacts/04_char_recoding/development.parquet
+      - artifacts/04_char_recoding/validation.parquet
+      - decisions/transformation_rules.yaml
+    params:
+      - global
+      - transformations
+    outs:
+      - artifacts/05_transformations/development.parquet
+      - artifacts/05_transformations/validation.parquet
+    metrics:
+      - artifacts/05_transformations/metrics.json:
+          cache: false
+
+  factor_assessment:
+    cmd: python pipeline/stages/s06_factor_assessment.py
+    deps:
+      - pipeline/stages/s06_factor_assessment.py
+      - pipeline/common/metrics.py
+      - pipeline/common/io.py
+      - artifacts/05_transformations/development.parquet
+      - artifacts/05_transformations/validation.parquet
+      - artifacts/05_transformations/metrics.json
+    params:
+      - global
+      - factor_assessment
+    outs:
+      - artifacts/06_factor_assessment/development.parquet
+      - artifacts/06_factor_assessment/validation.parquet
+    metrics:
+      - artifacts/06_factor_assessment/metrics.json:
+          cache: false
+
+  variable_grouping:
+    cmd: python pipeline/stages/s07_variable_grouping.py
+    deps:
+      - pipeline/stages/s07_variable_grouping.py
+      - pipeline/common/stats.py
+      - pipeline/common/io.py
+      - artifacts/06_factor_assessment/development.parquet
+      - artifacts/06_factor_assessment/validation.parquet
+      - artifacts/06_factor_assessment/metrics.json
+      - decisions/variable_grouping_rules.yaml
+    params:
+      - global
+      - variable_grouping
+    outs:
+      - artifacts/07_variable_grouping/development.parquet
+      - artifacts/07_variable_grouping/validation.parquet
+    metrics:
+      - artifacts/07_variable_grouping/metrics.json:
+          cache: false
+
+  multifactor_model:
+    cmd: python pipeline/stages/s08_multifactor_model.py
+    deps:
+      - pipeline/stages/s08_multifactor_model.py
+      - pipeline/common/metrics.py
+      - pipeline/common/io.py
+      - artifacts/07_variable_grouping/development.parquet
+      - artifacts/07_variable_grouping/validation.parquet
+      - artifacts/07_variable_grouping/metrics.json
+    params:
+      - global
+      - multifactor_model
+    outs:
+      - artifacts/08_multifactor_model/development.parquet
+      - artifacts/08_multifactor_model/validation.parquet
+    metrics:
+      - artifacts/08_multifactor_model/metrics.json:
+          cache: false
+
+  model_selection:
+    cmd: python pipeline/stages/s09_model_selection.py
+    deps:
+      - pipeline/stages/s09_model_selection.py
+      - pipeline/common/io.py
+      - artifacts/08_multifactor_model/development.parquet
+      - artifacts/08_multifactor_model/validation.parquet
+      - artifacts/08_multifactor_model/metrics.json
+    params:
+      - global
+      - model_selection
+    outs:
+      - artifacts/09_model_selection/development.parquet
+      - artifacts/09_model_selection/validation.parquet
+    metrics:
+      - artifacts/09_model_selection/metrics.json:
+          cache: false
+
+  validation:
+    cmd: python pipeline/stages/s10_validation.py
+    deps:
+      - pipeline/stages/s10_validation.py
+      - pipeline/common/metrics.py
+      - pipeline/common/stats.py
+      - pipeline/common/io.py
+      - artifacts/09_model_selection/development.parquet
+      - artifacts/09_model_selection/validation.parquet
+      - artifacts/09_model_selection/metrics.json
+    params:
+      - global
+      - validation
+    outs:
+      - artifacts/10_validation/development.parquet
+      - artifacts/10_validation/validation.parquet
+    metrics:
+      - artifacts/10_validation/metrics.json:
+          cache: false
+
+  documentation:
+    cmd: python pipeline/stages/s11_documentation.py
+    deps:
+      - pipeline/stages/s11_documentation.py
+      - pipeline/common/stats.py
+      - pipeline/common/io.py
+      - artifacts/10_validation/development.parquet
+      - artifacts/10_validation/validation.parquet
+      - artifacts/10_validation/metrics.json
+      - decisions/documentation_rules.yaml
+    params:
+      - global
+      - documentation
+    outs:
+      - artifacts/11_documentation/development.parquet
+      - artifacts/11_documentation/validation.parquet
+    metrics:
+      - artifacts/11_documentation/metrics.json:
+          cache: false

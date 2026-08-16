@@ -1,0 +1,93 @@
+{
+  "variables": {
+    "bureau_score": {
+      "dtype": "numeric",
+      "status": "none",
+      "suggested_lower_cap": 552.0,
+      "suggested_upper_cap": 847.5,
+      "applied_lower_cap": null,
+      "applied_upper_cap": null
+    },
+    "num_30dpd_6m": {
+      "dtype": "numeric",
+      "status": "none",
+      "suggested_lower_cap": 0.0,
+      "suggested_upper_cap": 4.0,
+      "applied_lower_cap": null,
+      "applied_upper_cap": null
+    },
+    "util_ratio_pct": {
+      "dtype": "numeric",
+      "status": "none",
+      "suggested_lower_cap": 8.0,
+      "suggested_upper_cap": 91.5,
+      "applied_lower_cap": null,
+      "applied_upper_cap": null
+    },
+    "noise_num_1": {
+      "dtype": "numeric",
+      "status": "none",
+      "suggested_lower_cap": 385.25,
+      "suggested_upper_cap": 621.0,
+      "applied_lower_cap": null,
+      "applied_upper_cap": null
+    },
+    "noise_num_2": {
+      "dtype": "numeric",
+      "status": "none",
+      "suggested_lower_cap": 0.01,
+      "suggested_upper_cap": 0.99,
+      "applied_lower_cap": null,
+      "applied_upper_cap": null
+    },
+    "months_on_book": {
+      "dtype": "numeric",
+      "status": "none",
+      "suggested_lower_cap": -1.0,
+      "suggested_upper_cap": 236.0,
+      "applied_lower_cap": null,
+      "applied_upper_cap": null
+    },
+    "collections_bal": {
+      "dtype": "numeric",
+      "status": "none",
+      "suggested_lower_cap": 0.0,
+      "suggested_upper_cap": 916.81,
+      "applied_lower_cap": null,
+      "applied_upper_cap": null
+    },
+    "annual_income": {
+      "dtype": "numeric",
+      "status": "none",
+      "suggested_lower_cap": 257508.42,
+      "suggested_upper_cap": 983091.39,
+      "applied_lower_cap": null,
+      "applied_upper_cap": null
+    },
+    "employment_type": {
+      "dtype": "categorical",
+      "status": "none",
+      "suggested_lower_cap": null,
+      "suggested_upper_cap": null,
+      "applied_lower_cap": null,
+      "applied_upper_cap": null
+    },
+    "state": {
+      "dtype": "categorical",
+      "status": "none",
+      "suggested_lower_cap": null,
+      "suggested_upper_cap": null,
+      "applied_lower_cap": null,
+      "applied_upper_cap": null
+    },
+    "channel": {
+      "dtype": "categorical",
+      "status": "none",
+      "suggested_lower_cap": null,
+      "suggested_upper_cap": null,
+      "applied_lower_cap": null,
+      "applied_upper_cap": null
+    }
+  },
+  "dropped_variables": []
+}

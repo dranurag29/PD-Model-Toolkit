@@ -1,0 +1,128 @@
+{
+  "corr_threshold": 0.5,
+  "excluded_variables": [],
+  "winners": {
+    "num_30dpd_6m": "num_30dpd_6m__linear",
+    "util_ratio_pct": "util_ratio_pct__linear",
+    "collections_bal": "collections_bal__linear",
+    "bureau_score": "bureau_score__linear",
+    "noise_num_1": "noise_num_1__binning",
+    "noise_num_2": "noise_num_2__binning",
+    "months_on_book": "months_on_book__binning",
+    "annual_income": "annual_income__binning"
+  },
+  "variable_to_group": {
+    "bureau_score": "0",
+    "num_30dpd_6m": "0",
+    "util_ratio_pct": "0",
+    "collections_bal": "1",
+    "noise_num_1": "2",
+    "noise_num_2": "3",
+    "months_on_book": "4",
+    "annual_income": "5"
+  },
+  "factor_groups": {
+    "0": [
+      "bureau_score",
+      "num_30dpd_6m",
+      "util_ratio_pct"
+    ],
+    "1": [
+      "collections_bal"
+    ],
+    "2": [
+      "noise_num_1"
+    ],
+    "3": [
+      "noise_num_2"
+    ],
+    "4": [
+      "months_on_book"
+    ],
+    "5": [
+      "annual_income"
+    ]
+  },
+  "correlation_matrix": {
+    "num_30dpd_6m__linear": {
+      "num_30dpd_6m__linear": 1.0,
+      "util_ratio_pct__linear": 0.5794,
+      "collections_bal__linear": 0.2987,
+      "bureau_score__linear": 0.6493,
+      "noise_num_1__binning": 0.0086,
+      "noise_num_2__binning": 0.0196,
+      "months_on_book__binning": 0.0061,
+      "annual_income__binning": 0.0445
+    },
+    "util_ratio_pct__linear": {
+      "num_30dpd_6m__linear": 0.5794,
+      "util_ratio_pct__linear": 1.0,
+      "collections_bal__linear": 0.2993,
+      "bureau_score__linear": 0.7952,
+      "noise_num_1__binning": 0.0047,
+      "noise_num_2__binning": 0.0056,
+      "months_on_book__binning": 0.0014,
+      "annual_income__binning": 0.0384
+    },
+    "collections_bal__linear": {
+      "num_30dpd_6m__linear": 0.2987,
+      "util_ratio_pct__linear": 0.2993,
+      "collections_bal__linear": 1.0,
+      "bureau_score__linear": 0.3311,
+      "noise_num_1__binning": -0.0127,
+      "noise_num_2__binning": 0.0074,
+      "months_on_book__binning": 0.0024,
+      "annual_income__binning": -0.0146
+    },
+    "bureau_score__linear": {
+      "num_30dpd_6m__linear": 0.6493,
+      "util_ratio_pct__linear": 0.7952,
+      "collections_bal__linear": 0.3311,
+      "bureau_score__linear": 1.0,
+      "noise_num_1__binning": 0.0019,
+      "noise_num_2__binning": 0.007,
+      "months_on_book__binning": 0.003,
+      "annual_income__binning": 0.0357
+    },
+    "noise_num_1__binning": {
+      "num_30dpd_6m__linear": 0.0086,
+      "util_ratio_pct__linear": 0.0047,
+      "collections_bal__linear": -0.0127,
+      "bureau_score__linear": 0.0019,
+      "noise_num_1__binning": 1.0,
+      "noise_num_2__binning": 0.0073,
+      "months_on_book__binning": 0.0157,
+      "annual_income__binning": -0.0078
+    },
+    "noise_num_2__binning": {
+      "num_30dpd_6m__linear": 0.0196,
+      "util_ratio_pct__linear": 0.0056,
+      "collections_bal__linear": 0.0074,
+      "bureau_score__linear": 0.007,
+      "noise_num_1__binning": 0.0073,
+      "noise_num_2__binning": 1.0,
+      "months_on_book__binning": -0.007,
+      "annual_income__binning": 0.014
+    },
+    "months_on_book__binning": {
+      "num_30dpd_6m__linear": 0.0061,
+      "util_ratio_pct__linear": 0.0014,
+      "collections_bal__linear": 0.0024,
+      "bureau_score__linear": 0.003,
+      "noise_num_1__binning": 0.0157,
+      "noise_num_2__binning": -0.007,
+      "months_on_book__binning": 1.0,
+      "annual_income__binning": 0.0137
+    },
+    "annual_income__binning": {
+      "num_30dpd_6m__linear": 0.0445,
+      "util_ratio_pct__linear": 0.0384,
+      "collections_bal__linear": -0.0146,
+      "bureau_score__linear": 0.0357,
+      "noise_num_1__binning": -0.0078,
+      "noise_num_2__binning": 0.014,
+      "months_on_book__binning": 0.0137,
+      "annual_income__binning": 1.0
+    }
+  }
+}

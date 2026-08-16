@@ -1,0 +1,6 @@
+{
+  "num_bootstrap_samples": 500,
+  "sample_rate": 60,
+  "n_models_validated": 0,
+  "models": []
+}

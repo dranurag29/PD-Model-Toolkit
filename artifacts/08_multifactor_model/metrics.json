@@ -1,0 +1,4120 @@
+{
+  "n_combinations": 127,
+  "n_combinations_possible": 127,
+  "truncated": false,
+  "max_combinations": 2000,
+  "combinations": [
+    {
+      "combination_id": "annual_income__binning",
+      "variables": [
+        "annual_income__binning"
+      ],
+      "num_factors": 1,
+      "gini": 0.101,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 1.723499,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 1.011732,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning",
+      "variables": [
+        "months_on_book__binning"
+      ],
+      "num_factors": 1,
+      "gini": 0.0408,
+      "significance": 0.0008,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 1.747835,
+          "p_value": 0.000798
+        },
+        "months_on_book__binning": {
+          "estimate": 1.025322,
+          "p_value": 0.00079
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning",
+      "variables": [
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.1077,
+      "significance": 0.0012,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.410432,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.994353,
+          "p_value": 0.001186
+        },
+        "annual_income__binning": {
+          "estimate": 1.006965,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "noise_num_2__binning",
+      "variables": [
+        "noise_num_2__binning"
+      ],
+      "num_factors": 1,
+      "gini": 0.07,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 1.72349,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.01167,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+noise_num_2__binning",
+      "variables": [
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.1242,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.397411,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.99162,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 1.002679,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning+noise_num_2__binning",
+      "variables": [
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.0808,
+      "significance": 0.0009,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.452753,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.008835,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.017259,
+          "p_value": 0.00089
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning+noise_num_2__binning",
+      "variables": [
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.1287,
+      "significance": 0.0013,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.066251,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.988943,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.986336,
+          "p_value": 0.001323
+        },
+        "annual_income__binning": {
+          "estimate": 0.997981,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "noise_num_1__binning",
+      "variables": [
+        "noise_num_1__binning"
+      ],
+      "num_factors": 1,
+      "gini": 0.0851,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 1.722116,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.010893,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+noise_num_1__binning",
+      "variables": [
+        "noise_num_1__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.1391,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.412841,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.0,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 1.003373,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning+noise_num_1__binning",
+      "variables": [
+        "noise_num_1__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.09,
+      "significance": 0.001,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.428688,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.006957,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.005037,
+          "p_value": 0.001038
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning+noise_num_1__binning",
+      "variables": [
+        "noise_num_1__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.1435,
+      "significance": 0.0015,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.059176,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 0.996131,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.974308,
+          "p_value": 0.001537
+        },
+        "annual_income__binning": {
+          "estimate": 0.998698,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "noise_num_1__binning",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.1128,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.433949,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.008304,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.007415,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.1503,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.073031,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 0.997166,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.986853,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.993855,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.1181,
+      "significance": 0.0012,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.122405,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.004421,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.00469,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.997077,
+          "p_value": 0.001162
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.1546,
+      "significance": 0.0017,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.704168,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 0.993512,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.984565,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.967262,
+          "p_value": 0.00169
+        },
+        "annual_income__binning": {
+          "estimate": 0.98937,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear",
+      "variables": [
+        "collections_bal__linear"
+      ],
+      "num_factors": 1,
+      "gini": 0.1589,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 1.734996,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.014952,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear",
+      "variables": [
+        "collections_bal__linear",
+        "annual_income__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.1814,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.532853,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.028902,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 1.041281,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning",
+      "variables": [
+        "collections_bal__linear",
+        "months_on_book__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.1668,
+      "significance": 0.0002,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.678072,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.021998,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.132765,
+          "p_value": 0.000244
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning",
+      "variables": [
+        "collections_bal__linear",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.1884,
+      "significance": 0.0004,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.412824,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.035624,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.101258,
+          "p_value": 0.000381
+        },
+        "annual_income__binning": {
+          "estimate": 1.03608,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+noise_num_2__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.1666,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.465165,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.016878,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.0136,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+noise_num_2__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.1982,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.212414,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.030573,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.992907,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 1.032534,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning+noise_num_2__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.1794,
+      "significance": 0.0003,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.39302,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.023956,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.011054,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.126344,
+          "p_value": 0.000273
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning+noise_num_2__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.2037,
+      "significance": 0.0004,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.07547,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.037313,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.990216,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.09406,
+          "p_value": 0.000426
+        },
+        "annual_income__binning": {
+          "estimate": 1.027263,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+noise_num_1__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_1__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.1795,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.542429,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.022048,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.053944,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+noise_num_1__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.2077,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.312422,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.036576,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.044592,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 1.033662,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning+noise_num_1__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.1804,
+      "significance": 0.0003,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.433652,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.028542,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.048749,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.108092,
+          "p_value": 0.000347
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning+noise_num_1__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.2125,
+      "significance": 0.0005,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.141905,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.042807,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.039531,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.077051,
+          "p_value": 0.000531
+        },
+        "annual_income__binning": {
+          "estimate": 1.02861,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.1942,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.258085,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.024003,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.05067,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.008322,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.2182,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.974923,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.038349,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.040951,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.986919,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 1.024409,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.2005,
+      "significance": 0.0004,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.133439,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.030541,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.045435,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.005745,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.101344,
+          "p_value": 0.000387
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.2225,
+      "significance": 0.0006,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 8.789479,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 1.044614,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.036035,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.984521,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.070418,
+          "p_value": 0.000588
+        },
+        "annual_income__binning": {
+          "estimate": 1.019427,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear",
+      "variables": [
+        "bureau_score__linear"
+      ],
+      "num_factors": 1,
+      "gini": 0.4674,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 1.720287,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.017883,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear",
+      "variables": [
+        "bureau_score__linear",
+        "annual_income__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.473,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.268234,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.013537,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.912666,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+months_on_book__binning",
+      "variables": [
+        "bureau_score__linear",
+        "months_on_book__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.469,
+      "significance": 0.0041,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.355692,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.017109,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.960013,
+          "p_value": 0.004147
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+months_on_book__binning",
+      "variables": [
+        "bureau_score__linear",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4747,
+      "significance": 0.0053,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.85462,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.012823,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.934602,
+          "p_value": 0.00535
+        },
+        "annual_income__binning": {
+          "estimate": 0.909219,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.4704,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.168936,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.01519,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.853,
+          "p_value": 1.4e-05
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4765,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.66184,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.010837,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.830181,
+          "p_value": 2.4e-05
+        },
+        "annual_income__binning": {
+          "estimate": 0.903271,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+months_on_book__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4722,
+      "significance": 0.0044,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.794126,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.014448,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.851431,
+          "p_value": 1.4e-05
+        },
+        "months_on_book__binning": {
+          "estimate": 0.955574,
+          "p_value": 0.004363
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+months_on_book__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4781,
+      "significance": 0.0055,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.242651,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.010153,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.829301,
+          "p_value": 2.5e-05
+        },
+        "months_on_book__binning": {
+          "estimate": 0.931933,
+          "p_value": 0.005519
+        },
+        "annual_income__binning": {
+          "estimate": 0.900084,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+noise_num_1__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_1__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.4766,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.571909,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.020754,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.084318,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+noise_num_1__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_1__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.482,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.099765,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.016761,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.077478,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.907358,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+months_on_book__binning+noise_num_1__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4779,
+      "significance": 0.0051,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.166778,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.019957,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.081409,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.939147,
+          "p_value": 0.00514
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+months_on_book__binning+noise_num_1__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4836,
+      "significance": 0.0068,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.639494,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.016011,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.074186,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.910906,
+          "p_value": 0.006756
+        },
+        "annual_income__binning": {
+          "estimate": 0.903541,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4797,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.007863,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.018147,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.081458,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.848307,
+          "p_value": 1.6e-05
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4854,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.483191,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.014141,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.075133,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.826226,
+          "p_value": 2.8e-05
+        },
+        "annual_income__binning": {
+          "estimate": 0.89818,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+months_on_book__binning+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.481,
+      "significance": 0.0053,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.596812,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.017393,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.078788,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.847369,
+          "p_value": 1.7e-05
+        },
+        "months_on_book__binning": {
+          "estimate": 0.936349,
+          "p_value": 0.00532
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+months_on_book__binning+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4868,
+      "significance": 0.0068,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 8.02338,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 1.013429,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.072178,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.826202,
+          "p_value": 2.8e-05
+        },
+        "months_on_book__binning": {
+          "estimate": 0.910491,
+          "p_value": 0.006824
+        },
+        "annual_income__binning": {
+          "estimate": 0.894708,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+collections_bal__linear",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear"
+      ],
+      "num_factors": 2,
+      "gini": 0.4686,
+      "significance": 0.0087,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 2.036859,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.991692,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.210869,
+          "p_value": 0.008697
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+collections_bal__linear",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4742,
+      "significance": 0.005,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.62862,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.985458,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.227437,
+          "p_value": 0.004963
+        },
+        "annual_income__binning": {
+          "estimate": 0.923615,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+collections_bal__linear+months_on_book__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4704,
+      "significance": 0.007,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.723094,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.990123,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.217342,
+          "p_value": 0.006969
+        },
+        "months_on_book__binning": {
+          "estimate": 0.984121,
+          "p_value": 0.003288
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+collections_bal__linear+months_on_book__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.476,
+      "significance": 0.0042,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.265967,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.984003,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.233472,
+          "p_value": 0.004
+        },
+        "months_on_book__binning": {
+          "estimate": 0.95915,
+          "p_value": 0.004246
+        },
+        "annual_income__binning": {
+          "estimate": 0.920189,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+collections_bal__linear+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4718,
+      "significance": 0.0073,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.506088,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.988481,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.216002,
+          "p_value": 0.007347
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.860422,
+          "p_value": 1.2e-05
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+collections_bal__linear+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4779,
+      "significance": 0.0042,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.044489,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.98225,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.232518,
+          "p_value": 0.004161
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.838301,
+          "p_value": 2e-05
+        },
+        "annual_income__binning": {
+          "estimate": 0.914556,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+collections_bal__linear+months_on_book__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4736,
+      "significance": 0.0059,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.184412,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.98694,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.222551,
+          "p_value": 0.005853
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.859199,
+          "p_value": 1.2e-05
+        },
+        "months_on_book__binning": {
+          "estimate": 0.980618,
+          "p_value": 0.003433
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+collections_bal__linear+months_on_book__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4794,
+      "significance": 0.0043,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.678667,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.98082,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.238647,
+          "p_value": 0.003332
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.83779,
+          "p_value": 2.1e-05
+        },
+        "months_on_book__binning": {
+          "estimate": 0.957429,
+          "p_value": 0.004346
+        },
+        "annual_income__binning": {
+          "estimate": 0.911393,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+collections_bal__linear+noise_num_1__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4774,
+      "significance": 0.0084,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.892638,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.994094,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.211918,
+          "p_value": 0.008401
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.086197,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+collections_bal__linear+noise_num_1__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.483,
+      "significance": 0.0047,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.467553,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.988145,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.229264,
+          "p_value": 0.004676
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.079908,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.918936,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+collections_bal__linear+months_on_book__binning+noise_num_1__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4787,
+      "significance": 0.0069,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.53402,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.992562,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.217792,
+          "p_value": 0.006868
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.082947,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.961608,
+          "p_value": 0.004155
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+collections_bal__linear+months_on_book__binning+noise_num_1__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4843,
+      "significance": 0.0055,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.053734,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.986713,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.234701,
+          "p_value": 0.003848
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.076257,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.933726,
+          "p_value": 0.005474
+        },
+        "annual_income__binning": {
+          "estimate": 0.915126,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+collections_bal__linear+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4806,
+      "significance": 0.0071,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.349694,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.99097,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.217125,
+          "p_value": 0.007082
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.083347,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.855952,
+          "p_value": 1.4e-05
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+collections_bal__linear+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4863,
+      "significance": 0.0039,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.874284,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.985013,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.234491,
+          "p_value": 0.003902
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.077627,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.834693,
+          "p_value": 2.3e-05
+        },
+        "annual_income__binning": {
+          "estimate": 0.910152,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "bureau_score__linear+collections_bal__linear+months_on_book__binning+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.482,
+      "significance": 0.0058,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.987287,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.989475,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.223075,
+          "p_value": 0.005759
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.080324,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.855341,
+          "p_value": 1.4e-05
+        },
+        "months_on_book__binning": {
+          "estimate": 0.959672,
+          "p_value": 0.004271
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+bureau_score__linear+collections_bal__linear+months_on_book__binning+noise_num_1__binning+noise_num_2__binning",
+      "variables": [
+        "bureau_score__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 6,
+      "gini": 0.4877,
+      "significance": 0.0055,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 8.463181,
+          "p_value": 0.0
+        },
+        "bureau_score__linear": {
+          "estimate": 0.983614,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.240025,
+          "p_value": 0.003192
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.074305,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.835024,
+          "p_value": 2.3e-05
+        },
+        "months_on_book__binning": {
+          "estimate": 0.93419,
+          "p_value": 0.005489
+        },
+        "annual_income__binning": {
+          "estimate": 0.906692,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear"
+      ],
+      "num_factors": 1,
+      "gini": 0.3575,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 1.807051,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.063498,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "annual_income__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.3837,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.306354,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.057144,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.88632,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "months_on_book__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.3683,
+      "significance": 0.0011,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.615029,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.063794,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.06034,
+          "p_value": 0.001076
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.3863,
+      "significance": 0.0015,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.055659,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.057403,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.030576,
+          "p_value": 0.001518
+        },
+        "annual_income__binning": {
+          "estimate": 0.881695,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.3741,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.271755,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.058857,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.864404,
+          "p_value": 5e-06
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.3891,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.738235,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.052772,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.850788,
+          "p_value": 8e-06
+        },
+        "annual_income__binning": {
+          "estimate": 0.8804,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.3753,
+      "significance": 0.0012,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.056125,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.059103,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.860358,
+          "p_value": 6e-06
+        },
+        "months_on_book__binning": {
+          "estimate": 1.050591,
+          "p_value": 0.001211
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.3907,
+      "significance": 0.0017,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.46709,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.052988,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.8473,
+          "p_value": 9e-06
+        },
+        "months_on_book__binning": {
+          "estimate": 1.021889,
+          "p_value": 0.00168
+        },
+        "annual_income__binning": {
+          "estimate": 0.875996,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "noise_num_1__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_1__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.3828,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.626037,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.066978,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.064232,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+noise_num_1__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_1__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.3984,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.095893,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.060683,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.05545,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.877699,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning+noise_num_1__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.3855,
+      "significance": 0.0015,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.382175,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.067146,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.059777,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.034505,
+          "p_value": 0.001468
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning+noise_num_1__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.3996,
+      "significance": 0.0022,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.78246,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.060794,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.050167,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 0.999942,
+          "p_value": 0.002155
+        },
+        "annual_income__binning": {
+          "estimate": 0.872323,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "noise_num_1__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.389,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.064477,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.062231,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.058887,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.854424,
+          "p_value": 7e-06
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+noise_num_1__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4008,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.505392,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.056195,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.050673,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.842082,
+          "p_value": 1.1e-05
+        },
+        "annual_income__binning": {
+          "estimate": 0.872238,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning+noise_num_1__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.3897,
+      "significance": 0.0016,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.802549,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.062368,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.05483,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.851233,
+          "p_value": 8e-06
+        },
+        "months_on_book__binning": {
+          "estimate": 1.02674,
+          "p_value": 0.001612
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning+noise_num_1__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4021,
+      "significance": 0.0023,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 8.178059,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 1.056274,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.04585,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.839593,
+          "p_value": 1.1e-05
+        },
+        "months_on_book__binning": {
+          "estimate": 0.993576,
+          "p_value": 0.00232
+        },
+        "annual_income__binning": {
+          "estimate": 0.867137,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear"
+      ],
+      "num_factors": 2,
+      "gini": 0.3924,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 2.665035,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.996806,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.567719,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.236673,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.988802,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.583907,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.914171,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.3924,
+      "significance": 0.0006,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.576282,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.996337,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.574367,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.115019,
+          "p_value": 0.000597
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4022,
+      "significance": 0.0009,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.08289,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.98831,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.589993,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.082628,
+          "p_value": 0.000881
+        },
+        "annual_income__binning": {
+          "estimate": 0.90899,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.3934,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.146657,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.991878,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.570378,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.871904,
+          "p_value": 5e-06
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4042,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.68777,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.984134,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.586593,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.85901,
+          "p_value": 7e-06
+        },
+        "annual_income__binning": {
+          "estimate": 0.908874,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.3952,
+      "significance": 0.0007,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.036831,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.991353,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.577045,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.86815,
+          "p_value": 5e-06
+        },
+        "months_on_book__binning": {
+          "estimate": 1.106455,
+          "p_value": 0.000667
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4067,
+      "significance": 0.001,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.515061,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.983596,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.59268,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.855689,
+          "p_value": 8e-06
+        },
+        "months_on_book__binning": {
+          "estimate": 1.074746,
+          "p_value": 0.000972
+        },
+        "annual_income__binning": {
+          "estimate": 0.903839,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+noise_num_1__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.3996,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.506269,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.999112,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.571547,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.074752,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+noise_num_1__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4112,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.055871,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.991154,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.588631,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.067731,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.907251,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning+noise_num_1__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4009,
+      "significance": 0.0009,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.356778,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.998565,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.577614,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.069357,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.085434,
+          "p_value": 0.000862
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning+noise_num_1__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4123,
+      "significance": 0.0013,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.830073,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.990558,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.59413,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.061472,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.048086,
+          "p_value": 0.001326
+        },
+        "annual_income__binning": {
+          "estimate": 0.901302,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+noise_num_1__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4043,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.957992,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.994098,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.574114,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.068685,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.86057,
+          "p_value": 7e-06
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+noise_num_1__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4143,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.482383,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.986386,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.59135,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.062402,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.849333,
+          "p_value": 9e-06
+        },
+        "annual_income__binning": {
+          "estimate": 0.902576,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning+noise_num_1__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4052,
+      "significance": 0.0009,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.793557,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.993511,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.580234,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.063726,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.857776,
+          "p_value": 7e-06
+        },
+        "months_on_book__binning": {
+          "estimate": 1.079021,
+          "p_value": 0.000938
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning+noise_num_1__binning+noise_num_2__binning+num_30dpd_6m__linear",
+      "variables": [
+        "num_30dpd_6m__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 6,
+      "gini": 0.4155,
+      "significance": 0.0014,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 9.244839,
+          "p_value": 0.0
+        },
+        "num_30dpd_6m__linear": {
+          "estimate": 0.985756,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.596883,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.056643,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.847122,
+          "p_value": 1e-05
+        },
+        "months_on_book__binning": {
+          "estimate": 1.042702,
+          "p_value": 0.001419
+        },
+        "annual_income__binning": {
+          "estimate": 0.896832,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear"
+      ],
+      "num_factors": 1,
+      "gini": 0.4252,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 1.789108,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.055795,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "annual_income__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.4324,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.347758,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.050935,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.919578,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "months_on_book__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.4279,
+      "significance": 0.0009,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.653045,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.056338,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.092989,
+          "p_value": 0.000895
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4348,
+      "significance": 0.0013,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.144421,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.051382,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.059101,
+          "p_value": 0.001315
+        },
+        "annual_income__binning": {
+          "estimate": 0.914021,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.4302,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.495829,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.055447,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.002241,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4374,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.990377,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.050366,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.977194,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.907279,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4329,
+      "significance": 0.001,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.351069,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.056089,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.000826,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.089241,
+          "p_value": 0.000953
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4395,
+      "significance": 0.0014,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.7851,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.050928,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.976777,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.057913,
+          "p_value": 0.001356
+        },
+        "annual_income__binning": {
+          "estimate": 0.902105,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "noise_num_1__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_1__binning"
+      ],
+      "num_factors": 2,
+      "gini": 0.433,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.546009,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.056226,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.030936,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+noise_num_1__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_1__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4401,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.091035,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.051924,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.025945,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.915995,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning+noise_num_1__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4351,
+      "significance": 0.0011,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.371129,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.056721,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.027778,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.073394,
+          "p_value": 0.001133
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning+noise_num_1__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4419,
+      "significance": 0.0017,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.848967,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.052335,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.022872,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.039368,
+          "p_value": 0.001652
+        },
+        "annual_income__binning": {
+          "estimate": 0.910531,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "noise_num_1__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4374,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.239245,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.055924,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.02772,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.997446,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+noise_num_1__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4441,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.726801,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.05144,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.023927,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.974315,
+          "p_value": 1e-06
+        },
+        "annual_income__binning": {
+          "estimate": 0.904436,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "months_on_book__binning+noise_num_1__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4395,
+      "significance": 0.0012,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.057053,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.056521,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.024634,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.996227,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.070189,
+          "p_value": 0.001197
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+months_on_book__binning+noise_num_1__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.446,
+      "significance": 0.0017,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 8.485464,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.051963,
+          "p_value": 0.0
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.021012,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.974246,
+          "p_value": 1e-06
+        },
+        "months_on_book__binning": {
+          "estimate": 1.039169,
+          "p_value": 0.001685
+        },
+        "annual_income__binning": {
+          "estimate": 0.899434,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear"
+      ],
+      "num_factors": 2,
+      "gini": 0.4289,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 2.349707,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.008117,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.374572,
+          "p_value": 3e-06
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "annual_income__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4361,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 3.953145,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.00154,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.387932,
+          "p_value": 1e-06
+        },
+        "annual_income__binning": {
+          "estimate": 0.934172,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "months_on_book__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4314,
+      "significance": 0.0006,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.273119,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.007936,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.380113,
+          "p_value": 2e-06
+        },
+        "months_on_book__binning": {
+          "estimate": 1.123017,
+          "p_value": 0.000641
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4383,
+      "significance": 0.0009,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.8095,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.001283,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.393194,
+          "p_value": 1e-06
+        },
+        "months_on_book__binning": {
+          "estimate": 1.089528,
+          "p_value": 0.000948
+        },
+        "annual_income__binning": {
+          "estimate": 0.928608,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4339,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.066458,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.007634,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.376837,
+          "p_value": 2e-06
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.00595,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4411,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.605294,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.000849,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.389965,
+          "p_value": 1e-06
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.980717,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.921987,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4363,
+      "significance": 0.0007,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.983054,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.007545,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.382458,
+          "p_value": 2e-06
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.004815,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.12002,
+          "p_value": 0.000678
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4432,
+      "significance": 0.001,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.461116,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.000703,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.395301,
+          "p_value": 1e-06
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.98053,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.0889,
+          "p_value": 0.000973
+        },
+        "annual_income__binning": {
+          "estimate": 0.916769,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+noise_num_1__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning"
+      ],
+      "num_factors": 3,
+      "gini": 0.4366,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 4.124858,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.007455,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.378673,
+          "p_value": 2e-06
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.038651,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+noise_num_1__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4434,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.718125,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.001401,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.3926,
+          "p_value": 1e-06
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.034429,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.931306,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning+noise_num_1__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4382,
+      "significance": 0.0008,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 6.003048,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.007289,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.383632,
+          "p_value": 2e-06
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.03488,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.100799,
+          "p_value": 0.000839
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning+noise_num_1__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4449,
+      "significance": 0.0012,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.529279,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.001167,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.397306,
+          "p_value": 1e-06
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.030748,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.067104,
+          "p_value": 0.001231
+        },
+        "annual_income__binning": {
+          "estimate": 0.925836,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+noise_num_1__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning"
+      ],
+      "num_factors": 4,
+      "gini": 0.4407,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 5.825785,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.007048,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.380696,
+          "p_value": 2e-06
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.034957,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 1.000471,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+noise_num_1__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4477,
+      "significance": 0.0,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.361822,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.000825,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.394503,
+          "p_value": 1e-06
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.032017,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.977303,
+          "p_value": 0.0
+        },
+        "annual_income__binning": {
+          "estimate": 0.919948,
+          "p_value": 0.0
+        }
+      }
+    },
+    {
+      "combination_id": "collections_bal__linear+months_on_book__binning+noise_num_1__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning"
+      ],
+      "num_factors": 5,
+      "gini": 0.4425,
+      "significance": 0.0009,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 7.698839,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.006977,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.385765,
+          "p_value": 2e-06
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.03128,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.999568,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.098429,
+          "p_value": 0.00088
+        }
+      }
+    },
+    {
+      "combination_id": "annual_income__binning+collections_bal__linear+months_on_book__binning+noise_num_1__binning+noise_num_2__binning+util_ratio_pct__linear",
+      "variables": [
+        "util_ratio_pct__linear",
+        "collections_bal__linear",
+        "noise_num_1__binning",
+        "noise_num_2__binning",
+        "months_on_book__binning",
+        "annual_income__binning"
+      ],
+      "num_factors": 6,
+      "gini": 0.4494,
+      "significance": 0.0012,
+      "sign_correct": true,
+      "converged": true,
+      "coefficients": {
+        "Intercept": {
+          "estimate": 9.175485,
+          "p_value": 0.0
+        },
+        "util_ratio_pct__linear": {
+          "estimate": 1.0007,
+          "p_value": 0.0
+        },
+        "collections_bal__linear": {
+          "estimate": 0.399315,
+          "p_value": 1e-06
+        },
+        "noise_num_1__binning": {
+          "estimate": 1.028523,
+          "p_value": 0.0
+        },
+        "noise_num_2__binning": {
+          "estimate": 0.977512,
+          "p_value": 0.0
+        },
+        "months_on_book__binning": {
+          "estimate": 1.067566,
+          "p_value": 0.001248
+        },
+        "annual_income__binning": {
+          "estimate": 0.914909,
+          "p_value": 0.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+# Scalar pipeline parameters, tracked by DVC (see dvc.yaml `params:` per stage).
+# Per-variable analyst decisions (outlier caps, imputation overrides, ...) live in
+# decisions/*.yaml instead -- see README.md for why.
+#
+# Values below mirror the thresholds hardcoded as SAS %let macro variables in the
+# original "PD TOOLKIT" .sas scripts (see the file referenced in each comment).
+
+# ---- Phase 1 (implemented) ------------------------------------------------
+
+global:
+  # column names, from "0.0 ALL standard declarations.sas"
+  application_no: CUST_ID
+  bad_flag: Good_Bad
+  sample_weight: sample_weight
+  # values treated as "special/dummy" rather than real numeric observations
+  # (SAS &dummy_list.) -- e.g. -1 used as a "not applicable" sentinel
+  dummy_values: []
+univariate:
+  # ports var_select's condition_1..4 OR-of-ANDs screen from
+  # "1.0 initial univariate ginis.sas": a variable passes if it clears ANY
+  # (min_gini AND min_fill_rate) pair below, OR clears min_iv.
+  gini_fillrate_conditions:
+    - {min_gini: 0.20, min_fill_rate: 0.10}
+    - {min_gini: 0.15, min_fill_rate: 0.20}
+    - {min_gini: 0.10, min_fill_rate: 0.40}
+    - {min_gini: 0.05, min_fill_rate: 0.80}
+  min_iv: 0.02
+  # condition_5 in the SAS macro: drop a variable if adding missing-value
+  # handling inflates its Gini by more than this over the non-missing Gini,
+  # while the non-missing Gini itself is still weak -- a sign the "signal"
+  # is really just a missing-value flag in disguise.
+  max_missing_gini_uplift: 0.25
+  missing_gini_uplift_ceiling: 0.20
+  # proc rank groups=20 in gini_num_with_missing / gini_char_with_missing,
+  # shrunk until every bin has >= iv_min_bin_size weighted observations
+  # (or floor of 3 bins) -- &mvg_avg.
+  iv_bin_count: 20
+  iv_min_bin_size: 100
+  iv_min_bins_floor: 3
+
+missing_value:
+  # applied to any variable without an explicit override in
+  # decisions/missing_value_rules.yaml
+  default_strategy: median   # one of: mean | median | mode | constant | flag_category
+  default_constant: 0
+
+outlier:
+  # applied to any variable without an explicit override in
+  # decisions/outlier_rules.yaml
+  default_strategy: none     # one of: none | cap | drop
+  # percentile bounds used to *suggest* cap values in the Streamlit UI
+  # (mirrors the descriptive percentiles computed in
+  # "3.0 descriptives for outlier treatment.sas")
+  suggest_lower_percentile: 1
+  suggest_upper_percentile: 99
+
+char_recoding:
+  # ports "4.0 char recoding etc.sas" -- in the SAS file itself, the
+  # frequency-table and bad-rate diagnostic macros (freqtbl, bad_rate) are
+  # commented out, and the actual category grouping was done externally via
+  # a CHAID export (also commented out) plus manual analyst review; as
+  # written the stage is a straight pass-through. Here the diagnostics run
+  # unconditionally (replacing freqtbl/bad_rate), and any category below
+  # min_category_share is auto-consolidated into rare_category_bucket_name
+  # by default -- a CHAID-adjacent way of stabilizing bad-rate estimates on
+  # sparse levels. Per-variable overrides in
+  # decisions/char_recoding_rules.yaml (mode: auto | none | custom) stand in
+  # for the analyst's CHAID/Excel review: 'none' reproduces the SAS file's
+  # literal pass-through, 'custom' takes an explicit level -> group name map.
+  min_category_share: 0.02
+  rare_category_bucket_name: OTHER
+
+transformations:
+  # ports "5.1.1 numeric transformations - test applicable transformation.sas"
+  # (proc nlin curve fitting) and the spirit of "5.2.x" (special/dummy-value
+  # handling -- see pipeline.common.curves for the full rationale, including
+  # which of SAS's 9 shape classes this keeps vs deliberately drops).
+  significance_level: 0.2
+  r_square_level: 0.01
+  # binned log-odds trend curve each shape is fit against (replaces "5.0
+  # create variable trends.sas"'s moving-average smoothing with quantile
+  # bucketing -- see weighted_trend_buckets)
+  n_trend_buckets: 20
+  min_trend_bucket_size: 100
+  # binning (class J) fits on row-level data directly, not the coarser
+  # trend buckets, since it needs enough resolution for sensible cut points
+  binning_n_bins: 10
+  binning_min_bin_size: 100
+
+factor_assessment:
+  # ports "6.0 factor assessment.sas". Bonus multipliers for simpler/more-
+  # standard transformation classes (SAS's 1.05/1.04/1.03 for classes
+  # A/I/J) are hardcoded, not exposed as params, matching how SAS hardcoded
+  # them too -- see pipeline.stages.s06_factor_assessment.ADJUSTED_GINI_BONUS.
+  gini_level: 0.01
+  significance_level: 0.20
+
+variable_grouping:
+  # ports "7.0"/"7.1": re-derives the "selected_factors" winner-per-variable
+  # (same adjusted_gini/usable logic as Stage 6, materialized here as the
+  # actual output feeding a future Stage 8's model search), then groups the
+  # winners into non-overlapping clusters via connected components of the
+  # correlation graph (edge = |corr| >= corr_threshold). This is a simpler,
+  # deterministic substitute for SAS's iterative PROC FACTOR rotation-count
+  # search in create_factor_groups, which was hunting for exactly this
+  # invariant -- every originally-correlated pair of variables ends up in
+  # the same group -- by trial and error; connected components achieves it
+  # directly and provably minimally, with no approximation risk.
+  corr_threshold: 0.5
+
+multifactor_model:
+  # ports "8.0 model development - multifactor model.sas": brute-force fits
+  # a weighted logistic regression for every combination of "skip this
+  # factor group, or include exactly one of its winning variables" across
+  # Stage 7's factor groups -- every candidate model has at most one
+  # variable per correlated cluster, avoiding multicollinearity by
+  # construction. No threshold filtering happens here; that's a future
+  # model-selection stage's job, matching the original SAS file boundary.
+  #
+  # Fitting (and Gini) use a 50/50-rebalanced sample weight -- ports SAS's
+  # `multiplier=(100-percent)/percent` reweighting of bad-flag=1 rows so
+  # weighted bad and good populations become equal, a standard rare-event
+  # technique for stabilizing logistic regression on an imbalanced target.
+  # Final calibration back to the true population bad rate belongs to a
+  # later stage (SAS's "11.2 ... ACTUAL weights"), not this one.
+  #
+  # Safety cap not present in the SAS original (which just runs however
+  # long the brute force takes) -- protects the Streamlit UI from an
+  # accidental combinatorial explosion on a real dataset with many/large
+  # factor groups.
+  max_combinations: 2000
+
+model_selection:
+  # ports "9.0 model development - select models.sas": filters Stage 8's
+  # combination leaderboard to real finalists (sign_correct AND
+  # significance <= level_significant AND num_factors >= level_num_factors
+  # AND gini > level_gini), then computes each surviving variable's
+  # "contribution" (coefficient x weighted mean-difference between bad and
+  # good, on a freshly 50/50-rebalanced sample -- SAS's exact stage-9
+  # rebalancing formula, which differs subtly from Stage 8's, see
+  # pipeline.stages.s09_model_selection) normalized into a factor_weight
+  # per variable that sums to 1 within a combination. Combinations where
+  # one variable's weight exceeds level_max_wt (a sign flip elsewhere
+  # pushing one share past 100%) or falls below level_min_wt (statistically
+  # significant but practically negligible) are dropped too.
+  level_gini: 0.45
+  level_significant: 0.05
+  level_num_factors: 2
+  level_max_wt: 1.0
+  level_min_wt: 0.05
+
+validation:
+  # ports "10.0 model validation.sas": for every Stage 9 finalist, fits on
+  # a 50/50-rebalanced development sample, then SCORES the untouched
+  # validation set -- the first stage in this pipeline to use validation
+  # data for anything beyond passthrough. Draws num_bootstrap_samples
+  # independent bootstrap replicates from the scored validation set (each
+  # an unweighted simple random sample of sample_rate% of validation rows,
+  # no replacement, matching `proc surveyselect method=srs`); for each
+  # replicate, re-derives a fresh 50/50 weight specific to that replicate's
+  # resampled bad rate, computes Gini under that weighting using the
+  # already-scored predictions, and refits the model from scratch on just
+  # that replicate's rows to get fresh coefficient estimates. Averaging
+  # Gini and each coefficient across all replicates (and their coefficient
+  # of variation) measures how stable the model actually is outside the
+  # exact development sample it was fit on.
+  num_bootstrap_samples: 500
+  sample_rate: 60
+  # not in the SAS original -- makes the bootstrap draw reproducible given
+  # a fixed params.yaml, consistent with this being a DVC pipeline (an
+  # unseeded draw would make the output un-reproducible run to run).
+  random_seed: 42
+
+documentation:
+  # ports "11.1"/"11.2" as one stage, since 11.2 directly reuses 11.1's
+  # fitted model (only its intercept gets recalibrated). Picks Stage 10's
+  # #1-ranked (by val_gini) validated model by default -- override via
+  # decisions/documentation_rules.yaml's selected_combination_id -- refits
+  # it on the full 50/50-rebalanced development sample, and produces two
+  # decile calibration tables: "50/50" (predictions/weights exactly as
+  # fit -- useful for rank-ordering, not absolute calibration) and "actual"
+  # (11.2's offset-regression intercept-correction technique, recalibrating
+  # to target_bad_rate while keeping the original slope coefficients
+  # exactly). See pipeline.stages.s11_documentation for the full mechanism.
+  #
+  # target_bad_rate replaces SAS's hardcoded segment_bad_rate (a specific
+  # business constant from the original engagement, meaningless here) with
+  # an explicit 0-1 fraction. null means "use the development sample's own
+  # observed weighted bad rate" -- the only defensible zero-config default
+  # when no separately-known true population rate is provided.
+  n_calibration_buckets: 20
+  target_bad_rate:

@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.streamlit/
+*.egg-info/
+.pytest_cache/
+.claude/
+
+# Original SAS pipeline + reference workbooks kept locally only, not pushed
+# to GitHub (see pipeline/stages/*.py docstrings for what was ported from
+# each file).
+*.sas
+*.xls
+*.xlsx
+
+# Unrelated file found in this directory, not part of the PD Toolkit.
+company_financials.csv

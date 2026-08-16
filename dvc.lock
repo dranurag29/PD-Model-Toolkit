@@ -1,0 +1,600 @@
+schema: '2.0'
+stages:
+  generate_synthetic_data:
+    cmd: python scripts/make_synthetic_data.py
+    deps:
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: scripts/make_synthetic_data.py
+      hash: md5
+      md5: 6397c13290d37b8a7d9ffd98e5643b01
+      size: 3956
+    outs:
+    - path: data/raw/development_base.parquet
+      hash: md5
+      md5: dc4a51bba370bcd02095dd59b5488fe1
+      size: 146199
+    - path: data/raw/validation_base.parquet
+      hash: md5
+      md5: 564031240f345667e9f538fa982adeea
+      size: 69736
+  univariate_gini:
+    cmd: python pipeline/stages/s01_univariate_gini.py
+    deps:
+    - path: data/raw/development_base.parquet
+      hash: md5
+      md5: dc4a51bba370bcd02095dd59b5488fe1
+      size: 146199
+    - path: data/raw/validation_base.parquet
+      hash: md5
+      md5: 564031240f345667e9f538fa982adeea
+      size: 69736
+    - path: decisions/univariate_review.yaml
+      hash: md5
+      md5: 1cdb8f6662c9c6779d36d74f2704a839
+      size: 14
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: pipeline/common/metrics.py
+      hash: md5
+      md5: 1185050f6db9ced09c83c5d993d9ca47
+      size: 6499
+    - path: pipeline/stages/s01_univariate_gini.py
+      hash: md5
+      md5: 0f0ce396d8dec8662a25d3db662d2a35
+      size: 6652
+    params:
+      params.yaml:
+        global:
+          application_no: CUST_ID
+          bad_flag: Good_Bad
+          sample_weight: sample_weight
+          dummy_values: []
+        univariate:
+          gini_fillrate_conditions:
+          - min_gini: 0.2
+            min_fill_rate: 0.1
+          - min_gini: 0.15
+            min_fill_rate: 0.2
+          - min_gini: 0.1
+            min_fill_rate: 0.4
+          - min_gini: 0.05
+            min_fill_rate: 0.8
+          min_iv: 0.02
+          max_missing_gini_uplift: 0.25
+          missing_gini_uplift_ceiling: 0.2
+          iv_bin_count: 20
+          iv_min_bin_size: 100
+          iv_min_bins_floor: 3
+    outs:
+    - path: artifacts/01_univariate/development.parquet
+      hash: md5
+      md5: dc4a51bba370bcd02095dd59b5488fe1
+      size: 146199
+    - path: artifacts/01_univariate/metrics.json
+      hash: md5
+      md5: 1547221de4d407800e7f06425b22b663
+      size: 3899
+    - path: artifacts/01_univariate/validation.parquet
+      hash: md5
+      md5: 564031240f345667e9f538fa982adeea
+      size: 69736
+  missing_value_treatment:
+    cmd: python pipeline/stages/s02_missing_value.py
+    deps:
+    - path: artifacts/01_univariate/development.parquet
+      hash: md5
+      md5: dc4a51bba370bcd02095dd59b5488fe1
+      size: 146199
+    - path: artifacts/01_univariate/validation.parquet
+      hash: md5
+      md5: 564031240f345667e9f538fa982adeea
+      size: 69736
+    - path: decisions/missing_value_rules.yaml
+      hash: md5
+      md5: 1cdb8f6662c9c6779d36d74f2704a839
+      size: 14
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: pipeline/common/stats.py
+      hash: md5
+      md5: 97d30ac0cad7d52337a69c66af72d536
+      size: 5867
+    - path: pipeline/stages/s02_missing_value.py
+      hash: md5
+      md5: 39797c8cc9d2ac0b472f9a2703f1ad1a
+      size: 5403
+    params:
+      params.yaml:
+        global:
+          application_no: CUST_ID
+          bad_flag: Good_Bad
+          sample_weight: sample_weight
+          dummy_values: []
+        missing_value:
+          default_strategy: median
+          default_constant: 0
+    outs:
+    - path: artifacts/02_missing/development.parquet
+      hash: md5
+      md5: bc9960c8494b05c96c5759d2571e25be
+      size: 146914
+    - path: artifacts/02_missing/metrics.json
+      hash: md5
+      md5: 38540bc22f0698e27450c5988296ac6b
+      size: 2228
+    - path: artifacts/02_missing/validation.parquet
+      hash: md5
+      md5: b2ddb6ceb3c322be2cbaf612cc4e6f69
+      size: 70127
+  outlier_treatment:
+    cmd: python pipeline/stages/s03_outlier_treatment.py
+    deps:
+    - path: artifacts/02_missing/development.parquet
+      hash: md5
+      md5: bc9960c8494b05c96c5759d2571e25be
+      size: 146914
+    - path: artifacts/02_missing/validation.parquet
+      hash: md5
+      md5: b2ddb6ceb3c322be2cbaf612cc4e6f69
+      size: 70127
+    - path: decisions/outlier_rules.yaml
+      hash: md5
+      md5: 1cdb8f6662c9c6779d36d74f2704a839
+      size: 14
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: pipeline/common/stats.py
+      hash: md5
+      md5: 97d30ac0cad7d52337a69c66af72d536
+      size: 5867
+    - path: pipeline/stages/s03_outlier_treatment.py
+      hash: md5
+      md5: af1a20067f72784e9a3cfad874dc5083
+      size: 4547
+    params:
+      params.yaml:
+        global:
+          application_no: CUST_ID
+          bad_flag: Good_Bad
+          sample_weight: sample_weight
+          dummy_values: []
+        outlier:
+          default_strategy: none
+          suggest_lower_percentile: 1
+          suggest_upper_percentile: 99
+    outs:
+    - path: artifacts/03_outlier/development.parquet
+      hash: md5
+      md5: 2041abb81927357efc6966da429235e5
+      size: 146910
+    - path: artifacts/03_outlier/metrics.json
+      hash: md5
+      md5: 51c1bb7be2d96831b1ddb3fc8411608e
+      size: 2427
+    - path: artifacts/03_outlier/validation.parquet
+      hash: md5
+      md5: ca38f732ba7872695707abdc8e72b664
+      size: 70123
+  char_recoding:
+    cmd: python pipeline/stages/s04_char_recoding.py
+    deps:
+    - path: artifacts/03_outlier/development.parquet
+      hash: md5
+      md5: 2041abb81927357efc6966da429235e5
+      size: 146910
+    - path: artifacts/03_outlier/validation.parquet
+      hash: md5
+      md5: ca38f732ba7872695707abdc8e72b664
+      size: 70123
+    - path: decisions/char_recoding_rules.yaml
+      hash: md5
+      md5: 1cdb8f6662c9c6779d36d74f2704a839
+      size: 14
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: pipeline/stages/s04_char_recoding.py
+      hash: md5
+      md5: ac342d0819b32dbfd85d699a2d22795e
+      size: 4922
+    params:
+      params.yaml:
+        char_recoding:
+          min_category_share: 0.02
+          rare_category_bucket_name: OTHER
+        global:
+          application_no: CUST_ID
+          bad_flag: Good_Bad
+          sample_weight: sample_weight
+          dummy_values: []
+    outs:
+    - path: artifacts/04_char_recoding/development.parquet
+      hash: md5
+      md5: 2041abb81927357efc6966da429235e5
+      size: 146910
+    - path: artifacts/04_char_recoding/metrics.json
+      hash: md5
+      md5: bb6f52af71d79f7ea8c2dbfaa1c35e0e
+      size: 3321
+    - path: artifacts/04_char_recoding/validation.parquet
+      hash: md5
+      md5: ca38f732ba7872695707abdc8e72b664
+      size: 70123
+  transformations:
+    cmd: python pipeline/stages/s05_transformations.py
+    deps:
+    - path: artifacts/04_char_recoding/development.parquet
+      hash: md5
+      md5: 2041abb81927357efc6966da429235e5
+      size: 146910
+    - path: artifacts/04_char_recoding/validation.parquet
+      hash: md5
+      md5: ca38f732ba7872695707abdc8e72b664
+      size: 70123
+    - path: decisions/transformation_rules.yaml
+      hash: md5
+      md5: 1cdb8f6662c9c6779d36d74f2704a839
+      size: 14
+    - path: pipeline/common/curves.py
+      hash: md5
+      md5: 9ec344c7358f7e4911fd46804e951911
+      size: 15611
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: pipeline/common/stats.py
+      hash: md5
+      md5: 97d30ac0cad7d52337a69c66af72d536
+      size: 5867
+    - path: pipeline/stages/s05_transformations.py
+      hash: md5
+      md5: d4bc2daa9b0268f1165554cf231d1e85
+      size: 7269
+    params:
+      params.yaml:
+        global:
+          application_no: CUST_ID
+          bad_flag: Good_Bad
+          sample_weight: sample_weight
+          dummy_values: []
+        transformations:
+          significance_level: 0.2
+          r_square_level: 0.01
+          n_trend_buckets: 20
+          min_trend_bucket_size: 100
+          binning_n_bins: 10
+          binning_min_bin_size: 100
+    outs:
+    - path: artifacts/05_transformations/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/05_transformations/metrics.json
+      hash: md5
+      md5: 902bebded7ebfc0279a331554c53f245
+      size: 31511
+    - path: artifacts/05_transformations/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+  factor_assessment:
+    cmd: python pipeline/stages/s06_factor_assessment.py
+    deps:
+    - path: artifacts/05_transformations/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/05_transformations/metrics.json
+      hash: md5
+      md5: 902bebded7ebfc0279a331554c53f245
+      size: 31511
+    - path: artifacts/05_transformations/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: pipeline/common/metrics.py
+      hash: md5
+      md5: 1185050f6db9ced09c83c5d993d9ca47
+      size: 6499
+    - path: pipeline/stages/s06_factor_assessment.py
+      hash: md5
+      md5: a71ecedcc1d1381ddeff32ee97a2ad98
+      size: 6964
+    params:
+      params.yaml:
+        factor_assessment:
+          gini_level: 0.01
+          significance_level: 0.2
+        global:
+          application_no: CUST_ID
+          bad_flag: Good_Bad
+          sample_weight: sample_weight
+          dummy_values: []
+    outs:
+    - path: artifacts/06_factor_assessment/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/06_factor_assessment/metrics.json
+      hash: md5
+      md5: 728f02ddb1763c889d21af757a90180f
+      size: 13032
+    - path: artifacts/06_factor_assessment/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+  variable_grouping:
+    cmd: python pipeline/stages/s07_variable_grouping.py
+    deps:
+    - path: artifacts/06_factor_assessment/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/06_factor_assessment/metrics.json
+      hash: md5
+      md5: 728f02ddb1763c889d21af757a90180f
+      size: 13032
+    - path: artifacts/06_factor_assessment/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+    - path: decisions/variable_grouping_rules.yaml
+      hash: md5
+      md5: 1cdb8f6662c9c6779d36d74f2704a839
+      size: 14
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: pipeline/common/stats.py
+      hash: md5
+      md5: 97d30ac0cad7d52337a69c66af72d536
+      size: 5867
+    - path: pipeline/stages/s07_variable_grouping.py
+      hash: md5
+      md5: fe4cca1ad84d685a75a87e22a2c5720c
+      size: 5345
+    params:
+      params.yaml:
+        global:
+          application_no: CUST_ID
+          bad_flag: Good_Bad
+          sample_weight: sample_weight
+          dummy_values: []
+        variable_grouping:
+          corr_threshold: 0.5
+    outs:
+    - path: artifacts/07_variable_grouping/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/07_variable_grouping/metrics.json
+      hash: md5
+      md5: 786eeeb720da2e458ff80fcbf4f3d7b1
+      size: 3802
+    - path: artifacts/07_variable_grouping/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+  multifactor_model:
+    cmd: python pipeline/stages/s08_multifactor_model.py
+    deps:
+    - path: artifacts/07_variable_grouping/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/07_variable_grouping/metrics.json
+      hash: md5
+      md5: 786eeeb720da2e458ff80fcbf4f3d7b1
+      size: 3802
+    - path: artifacts/07_variable_grouping/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: pipeline/common/metrics.py
+      hash: md5
+      md5: 1185050f6db9ced09c83c5d993d9ca47
+      size: 6499
+    - path: pipeline/stages/s08_multifactor_model.py
+      hash: md5
+      md5: 0ecb1d56a3136ce7d19c013f94dcc865
+      size: 6665
+    params:
+      params.yaml:
+        global:
+          application_no: CUST_ID
+          bad_flag: Good_Bad
+          sample_weight: sample_weight
+          dummy_values: []
+        multifactor_model:
+          max_combinations: 2000
+    outs:
+    - path: artifacts/08_multifactor_model/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/08_multifactor_model/metrics.json
+      hash: md5
+      md5: 55d8b6ffd16d873cfff67a891a108a21
+      size: 107246
+    - path: artifacts/08_multifactor_model/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+  model_selection:
+    cmd: python pipeline/stages/s09_model_selection.py
+    deps:
+    - path: artifacts/08_multifactor_model/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/08_multifactor_model/metrics.json
+      hash: md5
+      md5: 55d8b6ffd16d873cfff67a891a108a21
+      size: 107246
+    - path: artifacts/08_multifactor_model/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: pipeline/stages/s09_model_selection.py
+      hash: md5
+      md5: 529a30277eb843b8aa9b4ff16f8ef111
+      size: 6967
+    params:
+      params.yaml:
+        global:
+          application_no: CUST_ID
+          bad_flag: Good_Bad
+          sample_weight: sample_weight
+          dummy_values: []
+        model_selection:
+          level_gini: 0.45
+          level_significant: 0.05
+          level_num_factors: 2
+          level_max_wt: 1.0
+          level_min_wt: 0.05
+    outs:
+    - path: artifacts/09_model_selection/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/09_model_selection/metrics.json
+      hash: md5
+      md5: 0801a97cd7d2ef3940e6ebfcfb3b830a
+      size: 88
+    - path: artifacts/09_model_selection/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+  validation:
+    cmd: python pipeline/stages/s10_validation.py
+    deps:
+    - path: artifacts/09_model_selection/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/09_model_selection/metrics.json
+      hash: md5
+      md5: 0801a97cd7d2ef3940e6ebfcfb3b830a
+      size: 88
+    - path: artifacts/09_model_selection/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: pipeline/common/metrics.py
+      hash: md5
+      md5: 1185050f6db9ced09c83c5d993d9ca47
+      size: 6499
+    - path: pipeline/common/stats.py
+      hash: md5
+      md5: 97d30ac0cad7d52337a69c66af72d536
+      size: 5867
+    - path: pipeline/stages/s10_validation.py
+      hash: md5
+      md5: d1d9d9374c73dc91e52425e7c042d4e0
+      size: 7468
+    params:
+      params.yaml:
+        global:
+          application_no: CUST_ID
+          bad_flag: Good_Bad
+          sample_weight: sample_weight
+          dummy_values: []
+        validation:
+          num_bootstrap_samples: 500
+          sample_rate: 60
+          random_seed: 42
+    outs:
+    - path: artifacts/10_validation/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/10_validation/metrics.json
+      hash: md5
+      md5: 0cb82c61643c109807d031fc05e140d8
+      size: 98
+    - path: artifacts/10_validation/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+  documentation:
+    cmd: python pipeline/stages/s11_documentation.py
+    deps:
+    - path: artifacts/10_validation/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/10_validation/metrics.json
+      hash: md5
+      md5: 0cb82c61643c109807d031fc05e140d8
+      size: 98
+    - path: artifacts/10_validation/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555
+    - path: decisions/documentation_rules.yaml
+      hash: md5
+      md5: ae7db1499eaceacd80e327cdd67a9bcb
+      size: 233
+    - path: pipeline/common/io.py
+      hash: md5
+      md5: 425a5791bd6ba31c730c37f03e2e7120
+      size: 2956
+    - path: pipeline/common/stats.py
+      hash: md5
+      md5: 97d30ac0cad7d52337a69c66af72d536
+      size: 5867
+    - path: pipeline/stages/s11_documentation.py
+      hash: md5
+      md5: 67a907946eb4202bbe50193f1ca23ae9
+      size: 9784
+    params:
+      params.yaml:
+        documentation:
+          n_calibration_buckets: 20
+          target_bad_rate:
+        global:
+          application_no: CUST_ID
+          bad_flag: Good_Bad
+          sample_weight: sample_weight
+          dummy_values: []
+    outs:
+    - path: artifacts/11_documentation/development.parquet
+      hash: md5
+      md5: 76f9a8d3a09f552b02a4bef2c6365612
+      size: 460851
+    - path: artifacts/11_documentation/metrics.json
+      hash: md5
+      md5: e1e00e92aa08c17a7f9905a48efdfe78
+      size: 22
+    - path: artifacts/11_documentation/validation.parquet
+      hash: md5
+      md5: 66c29509d7860d2f948f53babae2b7a8
+      size: 255555

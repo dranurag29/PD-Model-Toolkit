@@ -1,0 +1,92 @@
+{
+  "variables": {
+    "bureau_score": {
+      "dtype": "numeric",
+      "strategy": "none",
+      "fill_value": null,
+      "pct_missing_dev": 0.0,
+      "pct_missing_val": 0.0,
+      "indicator_added": false
+    },
+    "num_30dpd_6m": {
+      "dtype": "numeric",
+      "strategy": "none",
+      "fill_value": null,
+      "pct_missing_dev": 0.0,
+      "pct_missing_val": 0.0,
+      "indicator_added": false
+    },
+    "util_ratio_pct": {
+      "dtype": "numeric",
+      "strategy": "none",
+      "fill_value": null,
+      "pct_missing_dev": 0.0,
+      "pct_missing_val": 0.0,
+      "indicator_added": false
+    },
+    "noise_num_1": {
+      "dtype": "numeric",
+      "strategy": "none",
+      "fill_value": null,
+      "pct_missing_dev": 0.0,
+      "pct_missing_val": 0.0,
+      "indicator_added": false
+    },
+    "noise_num_2": {
+      "dtype": "numeric",
+      "strategy": "none",
+      "fill_value": null,
+      "pct_missing_dev": 0.0,
+      "pct_missing_val": 0.0,
+      "indicator_added": false
+    },
+    "months_on_book": {
+      "dtype": "numeric",
+      "strategy": "none",
+      "fill_value": null,
+      "pct_missing_dev": 0.0,
+      "pct_missing_val": 0.0,
+      "indicator_added": false
+    },
+    "collections_bal": {
+      "dtype": "numeric",
+      "strategy": "median",
+      "fill_value": 28.395,
+      "pct_missing_dev": 0.7596,
+      "pct_missing_val": 0.754,
+      "indicator_added": false
+    },
+    "annual_income": {
+      "dtype": "numeric",
+      "strategy": "none",
+      "fill_value": null,
+      "pct_missing_dev": 0.0,
+      "pct_missing_val": 0.0,
+      "indicator_added": false
+    },
+    "employment_type": {
+      "dtype": "categorical",
+      "strategy": "none",
+      "fill_value": null,
+      "pct_missing_dev": 0.0,
+      "pct_missing_val": 0.0,
+      "indicator_added": false
+    },
+    "state": {
+      "dtype": "categorical",
+      "strategy": "none",
+      "fill_value": null,
+      "pct_missing_dev": 0.0,
+      "pct_missing_val": 0.0,
+      "indicator_added": false
+    },
+    "channel": {
+      "dtype": "categorical",
+      "strategy": "mode",
+      "fill_value": "branch",
+      "pct_missing_dev": 0.0962,
+      "pct_missing_val": 0.103,
+      "indicator_added": false
+    }
+  }
+}

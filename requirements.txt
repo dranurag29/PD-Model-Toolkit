@@ -1,0 +1,11 @@
+dvc>=3.50.0
+streamlit>=1.35.0
+pandas>=2.2.0
+numpy>=1.26.0
+scikit-learn>=1.4.0
+statsmodels>=0.14.0
+pyarrow>=15.0.0
+plotly>=5.20.0
+pyyaml>=6.0
+ruamel.yaml>=0.18.0
+pytest>=8.0.0

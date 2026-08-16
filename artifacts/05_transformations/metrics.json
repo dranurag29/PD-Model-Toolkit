@@ -1,0 +1,1406 @@
+{
+  "variables": {
+    "bureau_score": {
+      "min_x": 472.0,
+      "max_x": 935.0,
+      "expected_trend": "any",
+      "n_dummy_dev": 0,
+      "dummy_log_odds": null,
+      "trend_buckets": {
+        "x": [
+          570.0856,
+          611.239,
+          630.1562,
+          643.6765,
+          654.4582,
+          663.8425,
+          672.7692,
+          681.1151,
+          689.3347,
+          696.937,
+          704.6357,
+          712.4938,
+          720.7471,
+          730.0705,
+          739.5115,
+          749.5314,
+          760.5059,
+          774.9592,
+          794.7143,
+          832.3223
+        ],
+        "ln_odd": [
+          -0.0695,
+          -0.5767,
+          -0.7638,
+          -1.0986,
+          -1.5859,
+          -1.3863,
+          -1.5667,
+          -1.9017,
+          -1.9049,
+          -1.7346,
+          -1.9284,
+          -2.3671,
+          -2.3283,
+          -2.4114,
+          -2.0923,
+          -2.7125,
+          -2.7726,
+          -2.9747,
+          -3.0952,
+          -4.0943
+        ],
+        "weight": [
+          257.0,
+          251.0,
+          256.0,
+          238.0,
+          251.0,
+          273.0,
+          247.0,
+          252.0,
+          245.0,
+          238.0,
+          258.0,
+          243.0,
+          257.0,
+          241.0,
+          262.0,
+          239.0,
+          253.0,
+          245.0,
+          252.0,
+          242.0
+        ]
+      },
+      "attempts": [
+        {
+          "family": "linear",
+          "converged": true,
+          "r_squared": 0.965,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 8.142793,
+            "a1": -0.014408
+          },
+          "extra": {}
+        },
+        {
+          "family": "s_shape",
+          "converged": true,
+          "r_squared": 0.965,
+          "significance": 1.0,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": 20.0,
+            "a1": 0.001,
+            "a2": -1.958339
+          },
+          "extra": {}
+        },
+        {
+          "family": "log_linear",
+          "converged": true,
+          "r_squared": 0.9617,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 63.514246,
+            "a1": -9.997945
+          },
+          "extra": {}
+        },
+        {
+          "family": "quadratic",
+          "converged": true,
+          "r_squared": 0.9573,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 2.5e-05,
+            "a1": 0.008845,
+            "a2": -1.6e-05
+          },
+          "extra": {}
+        },
+        {
+          "family": "bell",
+          "converged": true,
+          "r_squared": 0.8758,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 0.261107,
+            "a1": 0.16046,
+            "a2": -2.98598
+          },
+          "extra": {}
+        },
+        {
+          "family": "inverted_bell",
+          "converged": true,
+          "r_squared": 0.8579,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 0.72834,
+            "a1": 0.166286,
+            "a2": -0.928029
+          },
+          "extra": {}
+        },
+        {
+          "family": "binning",
+          "converged": true,
+          "r_squared": 0.9356,
+          "significance": null,
+          "assessment": "usable",
+          "usable": true,
+          "params": {},
+          "extra": {
+            "edges": [
+              622.0,
+              649.0,
+              668.0,
+              685.0,
+              700.0,
+              716.0,
+              734.0,
+              754.0,
+              783.0,
+              935.0
+            ],
+            "log_odds": [
+              -0.3163373282121571,
+              -0.9233578990972474,
+              -1.4867459404246341,
+              -1.73695123273306,
+              -1.8307888131337902,
+              -2.1389556692122436,
+              -2.3891995658308165,
+              -2.370026373789578,
+              -2.9031107836735943,
+              -3.5388867844353418
+            ]
+          }
+        }
+      ],
+      "materialized_columns": [
+        "linear",
+        "log_linear",
+        "quadratic",
+        "bell",
+        "inverted_bell",
+        "binning"
+      ]
+    },
+    "num_30dpd_6m": {
+      "min_x": 0.0,
+      "max_x": 6.0,
+      "expected_trend": "any",
+      "n_dummy_dev": 0,
+      "dummy_log_odds": null,
+      "trend_buckets": {
+        "x": [
+          0.2376,
+          2.0,
+          3.0,
+          4.3028
+        ],
+        "ln_odd": [
+          -2.1102,
+          -0.9616,
+          -0.5128,
+          -0.1112
+        ],
+        "weight": [
+          3994.0,
+          591.0,
+          273.0,
+          142.0
+        ]
+      },
+      "attempts": [
+        {
+          "family": "linear",
+          "converged": true,
+          "r_squared": 0.9842,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": -2.231101,
+            "a1": 0.562548
+          },
+          "extra": {}
+        },
+        {
+          "family": "s_shape",
+          "converged": true,
+          "r_squared": 0.993,
+          "significance": 0.7188,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": 2.362934,
+            "a1": 9.999997,
+            "a2": -2.093324
+          },
+          "extra": {}
+        },
+        {
+          "family": "quadratic",
+          "converged": true,
+          "r_squared": 1.0,
+          "significance": 0.0005,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": -2.297451,
+            "a1": 0.804831,
+            "a2": -0.069183
+          },
+          "extra": {}
+        },
+        {
+          "family": "bell",
+          "converged": true,
+          "r_squared": 0.9624,
+          "significance": 0.1592,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 0.573474,
+            "a1": 0.207423,
+            "a2": -2.144338
+          },
+          "extra": {}
+        },
+        {
+          "family": "inverted_bell",
+          "converged": true,
+          "r_squared": 0.997,
+          "significance": 0.0451,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 0.042585,
+            "a1": 0.213182,
+            "a2": -0.237899
+          },
+          "extra": {}
+        },
+        {
+          "family": "binning",
+          "converged": true,
+          "r_squared": 0.9909,
+          "significance": null,
+          "assessment": "usable",
+          "usable": true,
+          "params": {},
+          "extra": {
+            "edges": [
+              1.0,
+              2.0,
+              6.0
+            ],
+            "log_odds": [
+              -2.1102132003465894,
+              -0.9615904911038186,
+              -0.3735898995777155
+            ]
+          }
+        }
+      ],
+      "materialized_columns": [
+        "linear",
+        "quadratic",
+        "bell",
+        "inverted_bell",
+        "binning"
+      ]
+    },
+    "util_ratio_pct": {
+      "min_x": 0.0,
+      "max_x": 100.0,
+      "expected_trend": "any",
+      "n_dummy_dev": 0,
+      "dummy_log_odds": null,
+      "trend_buckets": {
+        "x": [
+          13.3761,
+          23.8106,
+          28.8555,
+          32.7685,
+          36.0884,
+          39.1368,
+          41.988,
+          44.6122,
+          46.9445,
+          48.97,
+          51.2008,
+          53.6516,
+          55.9082,
+          58.2553,
+          60.7276,
+          63.4854,
+          66.8324,
+          70.7851,
+          76.5108,
+          86.8235
+        ],
+        "ln_odd": [
+          -3.4218,
+          -2.6433,
+          -3.0659,
+          -2.4022,
+          -2.5109,
+          -2.347,
+          -2.3936,
+          -2.4193,
+          -1.8106,
+          -2.36,
+          -1.9002,
+          -1.7872,
+          -1.4171,
+          -1.8056,
+          -1.3429,
+          -1.5388,
+          -0.9954,
+          -0.7908,
+          -0.8267,
+          -0.1853
+        ],
+        "weight": [
+          251.0,
+          254.0,
+          245.0,
+          251.0,
+          251.0,
+          250.0,
+          249.0,
+          255.0,
+          247.0,
+          253.0,
+          244.0,
+          256.0,
+          244.0,
+          253.0,
+          254.0,
+          247.0,
+          250.0,
+          248.0,
+          251.0,
+          247.0
+        ]
+      },
+      "attempts": [
+        {
+          "family": "linear",
+          "converged": true,
+          "r_squared": 0.9297,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": -4.04303,
+            "a1": 0.042856
+          },
+          "extra": {}
+        },
+        {
+          "family": "s_shape",
+          "converged": true,
+          "r_squared": 0.9013,
+          "significance": 0.2111,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": 5.204665,
+            "a1": 10.0,
+            "a2": -2.368053
+          },
+          "extra": {}
+        },
+        {
+          "family": "quadratic",
+          "converged": true,
+          "r_squared": 0.9362,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": -3.695362,
+            "a1": 0.026906,
+            "a2": 0.00016
+          },
+          "extra": {}
+        },
+        {
+          "family": "bell",
+          "converged": true,
+          "r_squared": 0.8784,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 0.801806,
+            "a1": 0.189671,
+            "a2": -2.690164
+          },
+          "extra": {}
+        },
+        {
+          "family": "inverted_bell",
+          "converged": true,
+          "r_squared": 0.8363,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 0.240181,
+            "a1": 0.205771,
+            "a2": -0.968958
+          },
+          "extra": {}
+        },
+        {
+          "family": "binning",
+          "converged": true,
+          "r_squared": 0.9189,
+          "significance": null,
+          "assessment": "usable",
+          "usable": true,
+          "params": {},
+          "extra": {
+            "edges": [
+              26.7,
+              34.4,
+              40.5,
+              45.8,
+              50.1,
+              54.8,
+              59.5,
+              65.0,
+              73.2,
+              100.0
+            ],
+            "log_odds": [
+              -3.001962823304627,
+              -2.712342053183751,
+              -2.448847599972298,
+              -2.4284653388830484,
+              -2.074967261284915,
+              -1.8535368289242982,
+              -1.6118446524646652,
+              -1.4444649939747587,
+              -0.8953840470548413,
+              -0.4980458971195917
+            ]
+          }
+        }
+      ],
+      "materialized_columns": [
+        "linear",
+        "quadratic",
+        "bell",
+        "inverted_bell",
+        "binning"
+      ]
+    },
+    "noise_num_1": {
+      "min_x": 326.8,
+      "max_x": 684.1,
+      "expected_trend": "any",
+      "n_dummy_dev": 0,
+      "dummy_log_odds": null,
+      "trend_buckets": {
+        "x": [
+          396.9472,
+          427.6751,
+          441.7879,
+          452.7386,
+          461.9124,
+          469.8227,
+          477.3012,
+          483.9016,
+          490.8308,
+          497.4419,
+          503.3917,
+          509.7876,
+          516.2911,
+          523.3803,
+          530.3709,
+          538.7837,
+          547.4802,
+          558.1369,
+          573.1154,
+          606.0176
+        ],
+        "ln_odd": [
+          -1.5811,
+          -1.6818,
+          -1.6835,
+          -1.6142,
+          -1.468,
+          -1.2126,
+          -1.769,
+          -1.5763,
+          -1.8245,
+          -1.7825,
+          -1.8718,
+          -1.7964,
+          -1.8443,
+          -1.7551,
+          -1.5309,
+          -1.7377,
+          -2.0705,
+          -1.801,
+          -1.5388,
+          -1.9642
+        ],
+        "weight": [
+          250.0,
+          253.0,
+          247.0,
+          251.0,
+          249.0,
+          251.0,
+          252.0,
+          249.0,
+          250.0,
+          248.0,
+          253.0,
+          251.0,
+          247.0,
+          249.0,
+          251.0,
+          252.0,
+          248.0,
+          252.0,
+          247.0,
+          250.0
+        ]
+      },
+      "attempts": [
+        {
+          "family": "linear",
+          "converged": true,
+          "r_squared": 0.1955,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": -0.884922,
+            "a1": -0.001639
+          },
+          "extra": {}
+        },
+        {
+          "family": "s_shape",
+          "converged": true,
+          "r_squared": 0.1956,
+          "significance": 1.0,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": 19.998351,
+            "a1": 0.033397,
+            "a2": -1.705145
+          },
+          "extra": {}
+        },
+        {
+          "family": "log_linear",
+          "converged": true,
+          "r_squared": 0.1919,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 3.291995,
+            "a1": -0.804674
+          },
+          "extra": {}
+        },
+        {
+          "family": "quadratic",
+          "converged": true,
+          "r_squared": 0.1971,
+          "significance": 0.3955,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": -1.463223,
+            "a1": 0.000693,
+            "a2": -2e-06
+          },
+          "extra": {}
+        },
+        {
+          "family": "bell",
+          "converged": true,
+          "r_squared": 0.1998,
+          "significance": 0.0271,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 0.051288,
+            "a1": 0.595935,
+            "a2": -2.211848
+          },
+          "extra": {}
+        },
+        {
+          "family": "inverted_bell",
+          "converged": true,
+          "r_squared": 0.195,
+          "significance": 0.0118,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 1.0,
+            "a1": 0.612769,
+            "a2": -1.251112
+          },
+          "extra": {}
+        },
+        {
+          "family": "binning",
+          "converged": true,
+          "r_squared": 0.6895,
+          "significance": null,
+          "assessment": "usable",
+          "usable": true,
+          "params": {},
+          "extra": {
+            "edges": [
+              436.1,
+              457.6,
+              473.7,
+              487.5,
+              500.5,
+              512.7,
+              526.6,
+              542.8,
+              564.6,
+              684.1
+            ],
+            "log_odds": [
+              -1.6406529317820249,
+              -1.6582280766035324,
+              -1.342061106143065,
+              -1.6802856027649364,
+              -1.8152899666382492,
+              -1.845826690498331,
+              -1.8106279535324379,
+              -1.6406529317820249,
+              -1.9413646866836387,
+              -1.7480240757202472
+            ]
+          }
+        }
+      ],
+      "materialized_columns": [
+        "linear",
+        "log_linear",
+        "bell",
+        "inverted_bell",
+        "binning"
+      ]
+    },
+    "noise_num_2": {
+      "min_x": 0.0,
+      "max_x": 1.0,
+      "expected_trend": "any",
+      "n_dummy_dev": 0,
+      "dummy_log_odds": null,
+      "trend_buckets": {
+        "x": [
+          0.0238,
+          0.0726,
+          0.1207,
+          0.1697,
+          0.219,
+          0.2651,
+          0.3167,
+          0.3725,
+          0.4208,
+          0.4725,
+          0.5212,
+          0.5694,
+          0.6169,
+          0.6687,
+          0.7182,
+          0.7651,
+          0.8158,
+          0.8703,
+          0.9227,
+          0.9731
+        ],
+        "ln_odd": [
+          -1.6094,
+          -1.9642,
+          -1.4009,
+          -1.7597,
+          -1.8788,
+          -1.8834,
+          -1.693,
+          -1.7827,
+          -1.7095,
+          -1.9324,
+          -1.9279,
+          -1.2993,
+          -1.4631,
+          -1.5261,
+          -1.5452,
+          -1.7409,
+          -1.5533,
+          -1.8245,
+          -1.6236,
+          -2.0263
+        ],
+        "weight": [
+          250.0,
+          250.0,
+          256.0,
+          250.0,
+          247.0,
+          248.0,
+          249.0,
+          255.0,
+          246.0,
+          251.0,
+          250.0,
+          250.0,
+          248.0,
+          250.0,
+          254.0,
+          246.0,
+          250.0,
+          250.0,
+          253.0,
+          247.0
+        ]
+      },
+      "attempts": [
+        {
+          "family": "linear",
+          "converged": true,
+          "r_squared": 0.0033,
+          "significance": 0.0011,
+          "assessment": "low R square",
+          "usable": false,
+          "params": {
+            "a0": -1.725987,
+            "a1": 0.039421
+          },
+          "extra": {}
+        },
+        {
+          "family": "s_shape",
+          "converged": true,
+          "r_squared": 0.0064,
+          "significance": 0.9347,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": -2.673167,
+            "a1": 2.151429,
+            "a2": -2.678899
+          },
+          "extra": {}
+        },
+        {
+          "family": "quadratic",
+          "converged": true,
+          "r_squared": 0.0334,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": -1.801031,
+            "a1": 0.495905,
+            "a2": -0.46017
+          },
+          "extra": {}
+        },
+        {
+          "family": "bell",
+          "converged": true,
+          "r_squared": 0.0363,
+          "significance": 0.0498,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 0.561961,
+            "a1": 0.725162,
+            "a2": -2.214273
+          },
+          "extra": {}
+        },
+        {
+          "family": "inverted_bell",
+          "converged": true,
+          "r_squared": 0.0003,
+          "significance": 0.9502,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": 0.0,
+            "a1": 2.452919,
+            "a2": -1.548175
+          },
+          "extra": {}
+        },
+        {
+          "family": "binning",
+          "converged": true,
+          "r_squared": 0.3581,
+          "significance": null,
+          "assessment": "usable",
+          "usable": true,
+          "params": {},
+          "extra": {
+            "edges": [
+              0.096,
+              0.196,
+              0.288,
+              0.397,
+              0.498,
+              0.593,
+              0.693,
+              0.789,
+              0.896,
+              1.0
+            ],
+            "log_odds": [
+              -1.7871190896715528,
+              -1.5767247150277977,
+              -1.8940383183484732,
+              -1.7486199765674373,
+              -1.8296787040903488,
+              -1.590434965308485,
+              -1.5028556495259517,
+              -1.6481836790099427,
+              -1.693024628542366,
+              -1.8199303461947514
+            ]
+          }
+        }
+      ],
+      "materialized_columns": [
+        "quadratic",
+        "bell",
+        "binning"
+      ]
+    },
+    "months_on_book": {
+      "min_x": -1.0,
+      "max_x": 239.0,
+      "expected_trend": "any",
+      "n_dummy_dev": 0,
+      "dummy_log_odds": null,
+      "trend_buckets": {
+        "x": [
+          1.2183,
+          21.1774,
+          34.253,
+          49.3089,
+          64.852,
+          78.4208,
+          92.6941,
+          107.1688,
+          121.6772,
+          137.1514,
+          151.3711,
+          165.4587,
+          178.8871,
+          192.6293,
+          206.1292,
+          218.632,
+          232.0697
+        ],
+        "ln_odd": [
+          -1.6407,
+          -1.6288,
+          -1.5677,
+          -1.9833,
+          -1.5811,
+          -1.8652,
+          -1.5771,
+          -2.0197,
+          -1.6864,
+          -1.9687,
+          -1.5279,
+          -1.5421,
+          -1.7825,
+          -1.8007,
+          -1.5041,
+          -1.7597,
+          -1.7314
+        ],
+        "weight": [
+          1008.0,
+          248.0,
+          253.0,
+          246.0,
+          250.0,
+          259.0,
+          255.0,
+          237.0,
+          254.0,
+          251.0,
+          256.0,
+          242.0,
+          248.0,
+          259.0,
+          240.0,
+          250.0,
+          244.0
+        ]
+      },
+      "attempts": [
+        {
+          "family": "linear",
+          "converged": true,
+          "r_squared": 0.0116,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": -1.682454,
+            "a1": -0.000211
+          },
+          "extra": {}
+        },
+        {
+          "family": "s_shape",
+          "converged": true,
+          "r_squared": 0.0116,
+          "significance": 1.0,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": 19.978521,
+            "a1": 0.001062,
+            "a2": -1.70401
+          },
+          "extra": {}
+        },
+        {
+          "family": "quadratic",
+          "converged": true,
+          "r_squared": 0.0739,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": -1.639648,
+            "a1": -0.001887,
+            "a2": 8e-06
+          },
+          "extra": {}
+        },
+        {
+          "family": "bell",
+          "converged": true,
+          "r_squared": 0.0013,
+          "significance": 0.9049,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": 0.0,
+            "a1": 2.167132,
+            "a2": -1.882601
+          },
+          "extra": {}
+        },
+        {
+          "family": "inverted_bell",
+          "converged": true,
+          "r_squared": 0.0751,
+          "significance": 0.0137,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 0.501068,
+            "a1": 0.726322,
+            "a2": -1.20685
+          },
+          "extra": {}
+        },
+        {
+          "family": "binning",
+          "converged": true,
+          "r_squared": 0.231,
+          "significance": null,
+          "assessment": "usable",
+          "usable": true,
+          "params": {},
+          "extra": {
+            "edges": [
+              14.0,
+              42.0,
+              71.0,
+              99.0,
+              129.0,
+              158.0,
+              185.0,
+              212.0,
+              239.0
+            ],
+            "log_odds": [
+              -1.6406529317820249,
+              -1.607054121078824,
+              -1.777773227253315,
+              -1.7255100836868544,
+              -1.8497467268784045,
+              -1.7400043877161588,
+              -1.6691571471357227,
+              -1.6606061990085,
+              -1.7569127378978868
+            ]
+          }
+        }
+      ],
+      "materialized_columns": [
+        "linear",
+        "quadratic",
+        "inverted_bell",
+        "binning"
+      ]
+    },
+    "collections_bal": {
+      "min_x": 0.0,
+      "max_x": 1856.99,
+      "expected_trend": "any",
+      "n_dummy_dev": 0,
+      "dummy_log_odds": null,
+      "trend_buckets": {
+        "x": [
+          24.5718,
+          76.1962,
+          270.01,
+          743.4958
+        ],
+        "ln_odd": [
+          -1.825,
+          -1.4231,
+          -1.3962,
+          -0.6576
+        ],
+        "weight": [
+          4399.0,
+          101.0,
+          250.0,
+          250.0
+        ]
+      },
+      "attempts": [
+        {
+          "family": "linear",
+          "converged": true,
+          "r_squared": 0.9722,
+          "significance": 0.0,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": -1.857856,
+            "a1": 0.001636
+          },
+          "extra": {}
+        },
+        {
+          "family": "s_shape",
+          "converged": true,
+          "r_squared": 0.969,
+          "significance": 0.5451,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": 1.786018,
+            "a1": 10.0,
+            "a2": -1.948456
+          },
+          "extra": {}
+        },
+        {
+          "family": "quadratic",
+          "converged": true,
+          "r_squared": 0.9747,
+          "significance": 0.0572,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": -1.869652,
+            "a1": 0.002032,
+            "a2": -1e-06
+          },
+          "extra": {}
+        },
+        {
+          "family": "bell",
+          "converged": true,
+          "r_squared": 0.9717,
+          "significance": 0.0951,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 0.417298,
+            "a1": 0.250249,
+            "a2": -2.252083
+          },
+          "extra": {}
+        },
+        {
+          "family": "inverted_bell",
+          "converged": true,
+          "r_squared": 0.9427,
+          "significance": 0.1359,
+          "assessment": "usable",
+          "usable": true,
+          "params": {
+            "a0": 0.0,
+            "a1": 0.244201,
+            "a2": -0.179656
+          },
+          "extra": {}
+        },
+        {
+          "family": "binning",
+          "converged": true,
+          "r_squared": 0.8128,
+          "significance": null,
+          "assessment": "usable",
+          "usable": true,
+          "params": {},
+          "extra": {
+            "edges": [
+              28.395,
+              125.19,
+              1856.99
+            ],
+            "log_odds": [
+              -1.8250243389048766,
+              -1.423108334242607,
+              -1.0000870696161408
+            ]
+          }
+        }
+      ],
+      "materialized_columns": [
+        "linear",
+        "quadratic",
+        "bell",
+        "inverted_bell",
+        "binning"
+      ]
+    },
+    "annual_income": {
+      "min_x": 84927.90972009301,
+      "max_x": 19400816.62962882,
+      "expected_trend": "any",
+      "n_dummy_dev": 0,
+      "dummy_log_odds": null,
+      "trend_buckets": {
+        "x": [
+          296710.945,
+          381984.7859,
+          425391.593,
+          458456.6139,
+          485056.457,
+          507778.7232,
+          530240.4161,
+          551558.5921,
+          570890.7169,
+          589890.3503,
+          607628.513,
+          626994.7543,
+          646269.5274,
+          665647.3633,
+          688487.6909,
+          712948.5998,
+          738727.8183,
+          773805.7992,
+          820234.0932,
+          2172460.8338
+        ],
+        "ln_odd": [
+          -1.7284,
+          -1.7918,
+          -1.7918,
+          -1.7918,
+          -1.7597,
+          -1.3715,
+          -2.2061,
+          -1.8581,
+          -1.5261,
+          -1.7597,
+          -1.6383,
+          -1.5533,
+          -1.3471,
+          -1.3962,
+          -1.5811,
+          -1.7597,
+          -1.9642,
+          -1.9279,
+          -1.6977,
+          -1.6977
+        ],
+        "weight": [
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0,
+          250.0
+        ]
+      },
+      "attempts": [
+        {
+          "family": "linear",
+          "converged": true,
+          "r_squared": 0.0013,
+          "significance": 0.0268,
+          "assessment": "low R square",
+          "usable": false,
+          "params": {
+            "a0": -1.720528,
+            "a1": 0.0
+          },
+          "extra": {}
+        },
+        {
+          "family": "s_shape",
+          "converged": true,
+          "r_squared": 0.0022,
+          "significance": 0.9773,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": -2.345625,
+            "a1": 10.0,
+            "a2": -2.640242
+          },
+          "extra": {}
+        },
+        {
+          "family": "log_linear",
+          "converged": true,
+          "r_squared": 0.0047,
+          "significance": 0.0002,
+          "assessment": "low R square",
+          "usable": false,
+          "params": {
+            "a0": -2.195544,
+            "a1": 0.036664
+          },
+          "extra": {}
+        },
+        {
+          "family": "quadratic",
+          "converged": true,
+          "r_squared": 0.0084,
+          "significance": 0.0,
+          "assessment": "low R square",
+          "usable": false,
+          "params": {
+            "a0": -0.0,
+            "a1": -4e-06,
+            "a2": 0.0
+          },
+          "extra": {}
+        },
+        {
+          "family": "bell",
+          "converged": true,
+          "r_squared": 0.0083,
+          "significance": 0.3195,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": 0.067316,
+            "a1": 0.1819,
+            "a2": -3.842908
+          },
+          "extra": {}
+        },
+        {
+          "family": "inverted_bell",
+          "converged": true,
+          "r_squared": 0.0003,
+          "significance": 0.964,
+          "assessment": "not significant",
+          "usable": false,
+          "params": {
+            "a0": 0.0,
+            "a1": 0.520094,
+            "a2": -0.942131
+          },
+          "extra": {}
+        },
+        {
+          "family": "binning",
+          "converged": true,
+          "r_squared": 0.7755,
+          "significance": null,
+          "assessment": "usable",
+          "usable": true,
+          "params": {},
+          "extra": {
+            "edges": [
+              403960.2455133882,
+              471790.93133149086,
+              518703.1378193491,
+              561040.3137238474,
+              598266.3015665832,
+              636966.7719746345,
+              675639.985741206,
+              725035.6220108407,
+              793722.7240247837,
+              19400816.62962882
+            ],
+            "log_odds": [
+              -1.7709974777796258,
+              -1.8034282130624324,
+              -1.5623704015761146,
+              -2.0353815518858056,
+              -1.6481836790099427,
+              -1.6046646336814427,
+              -1.3788409104653097,
+              -1.6779243265792565,
+              -1.9596403418672153,
+              -1.708283747070733
+            ]
+          }
+        }
+      ],
+      "materialized_columns": [
+        "binning"
+      ]
+    }
+  }
+}

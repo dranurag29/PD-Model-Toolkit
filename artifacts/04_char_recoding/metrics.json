@@ -1,0 +1,154 @@
+{
+  "variables": {
+    "employment_type": {
+      "mode": "auto",
+      "n_levels_before": 3,
+      "n_levels_after": 3,
+      "group_map": {},
+      "before": [
+        {
+          "level": "self_employed",
+          "population_share": 0.3956,
+          "bad_rate": 0.1173
+        },
+        {
+          "level": "salaried",
+          "population_share": 0.31,
+          "bad_rate": 0.0458
+        },
+        {
+          "level": "unemployed",
+          "population_share": 0.2944,
+          "bad_rate": 0.3125
+        }
+      ],
+      "after": [
+        {
+          "level": "self_employed",
+          "population_share": 0.3956,
+          "bad_rate": 0.1173
+        },
+        {
+          "level": "salaried",
+          "population_share": 0.31,
+          "bad_rate": 0.0458
+        },
+        {
+          "level": "unemployed",
+          "population_share": 0.2944,
+          "bad_rate": 0.3125
+        }
+      ]
+    },
+    "state": {
+      "mode": "auto",
+      "n_levels_before": 6,
+      "n_levels_after": 6,
+      "group_map": {},
+      "before": [
+        {
+          "level": "UP",
+          "population_share": 0.179,
+          "bad_rate": 0.1721
+        },
+        {
+          "level": "WB",
+          "population_share": 0.1732,
+          "bad_rate": 0.149
+        },
+        {
+          "level": "KA",
+          "population_share": 0.1668,
+          "bad_rate": 0.1739
+        },
+        {
+          "level": "DL",
+          "population_share": 0.1624,
+          "bad_rate": 0.1232
+        },
+        {
+          "level": "MH",
+          "population_share": 0.1602,
+          "bad_rate": 0.1436
+        },
+        {
+          "level": "TN",
+          "population_share": 0.1584,
+          "bad_rate": 0.1515
+        }
+      ],
+      "after": [
+        {
+          "level": "UP",
+          "population_share": 0.179,
+          "bad_rate": 0.1721
+        },
+        {
+          "level": "WB",
+          "population_share": 0.1732,
+          "bad_rate": 0.149
+        },
+        {
+          "level": "KA",
+          "population_share": 0.1668,
+          "bad_rate": 0.1739
+        },
+        {
+          "level": "DL",
+          "population_share": 0.1624,
+          "bad_rate": 0.1232
+        },
+        {
+          "level": "MH",
+          "population_share": 0.1602,
+          "bad_rate": 0.1436
+        },
+        {
+          "level": "TN",
+          "population_share": 0.1584,
+          "bad_rate": 0.1515
+        }
+      ]
+    },
+    "channel": {
+      "mode": "auto",
+      "n_levels_before": 3,
+      "n_levels_after": 3,
+      "group_map": {},
+      "before": [
+        {
+          "level": "branch",
+          "population_share": 0.405,
+          "bad_rate": 0.1462
+        },
+        {
+          "level": "dsa",
+          "population_share": 0.2992,
+          "bad_rate": 0.1618
+        },
+        {
+          "level": "online",
+          "population_share": 0.2958,
+          "bad_rate": 0.1521
+        }
+      ],
+      "after": [
+        {
+          "level": "branch",
+          "population_share": 0.405,
+          "bad_rate": 0.1462
+        },
+        {
+          "level": "dsa",
+          "population_share": 0.2992,
+          "bad_rate": 0.1618
+        },
+        {
+          "level": "online",
+          "population_share": 0.2958,
+          "bad_rate": 0.1521
+        }
+      ]
+    }
+  }
+}

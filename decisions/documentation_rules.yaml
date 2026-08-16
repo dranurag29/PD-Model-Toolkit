@@ -1,0 +1,5 @@
+# Which Stage 10 validated model to document. null (the default) picks
+# Stage 10's #1-ranked model by val_gini automatically; set to one of Stage
+# 10's combination_id values to override.
+selected_combination_id: null
+variables: {}
